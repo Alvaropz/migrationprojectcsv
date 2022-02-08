@@ -1,4 +1,4 @@
 package com.spartaglobal.migrationprojecttests;
 
-public class Example {
+public class TestLog {
 }
