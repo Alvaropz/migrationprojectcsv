@@ -6,6 +6,6 @@ import org.apache.logging.log4j.Logger;
 public class Example {
     public static Logger logger = LogManager.getLogger("Sort Manager Logger");
     public static void main(String[] args) {
-        logger.info("This is a test log to a file");
+        logger.info("This is a test log to a file 2");
     }
 }
