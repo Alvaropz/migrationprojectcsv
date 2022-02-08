@@ -5,37 +5,43 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class ReadFromCSV {
-    public static void read(String csv){
-        try(BufferedReader br = new BufferedReader(new FileReader(csv))){
+    public static ArrayList<String[]> read(String csv) {
+        ArrayList<String[]> data = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(csv))) {
             String line;
-            int duplicates = 0;
-            int f = 0;
-            ArrayList<String[]> data = new ArrayList<>();
-            while((line = br.readLine()) != null){
-                //System.out.println(Arrays.toString(line.split(",")));
+            while ((line = br.readLine()) != null) {
+                System.out.println(Arrays.toString(line.split(",")));
                 String[] lines = (line.split(","));
-                System.out.println(Arrays.toString(lines));
                 data.add(lines);
             }
-
-            for(String[] i : data){
-                String id = i[0];
-                for(String[] x : data){
-                    String id2 = x[0];
-                    if(id.equals(id2)){
-                        f++;
-                        if(f > 1){
-                            duplicates++;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return data;
+    }
+            public static int duplicateCheck(ArrayList<String[]> data){
+                int duplicates = 0;
+                List<String> dupids = new ArrayList<>();
+                for(String[] i : data) {
+                    String id = i[0];
+                    int f = 0;
+                    if (dupids.contains(id)) {
+                        continue;
+                    }
+                    for (String[] x : data) {
+                        if (x[0].equals(id)) {
+                            f++;
+                            if (f > 1 && dupids.contains(id) == false) {
+                                dupids.add(id);
+                                duplicates++;
+                            }
                         }
                     }
                 }
-
+                System.out.println(dupids);
+                return duplicates;
             }
-            System.out.println(duplicates);
-        } catch (IOException e){
-            e.printStackTrace();
         }
-    }
-}
