@@ -1,4 +1,9 @@
 package com.spartaglobal.migrationprojecttests;
 
-public class TestLog {
+import org.junit.Test;
+
+public class Example {
+
+    @Test
+    void check
 }
