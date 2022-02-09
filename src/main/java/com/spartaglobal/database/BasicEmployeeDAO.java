@@ -20,7 +20,7 @@ public class BasicEmployeeDAO implements EmployeeDAO{
             rs = preparedStatement.executeUpdate();
             preparedStatement = connection.prepareStatement(
                     "CREATE TABLE employees (\n" +
-                            "\tEmployeeID INT AUTO_INCREMENT PRIMARY KEY,\n" +
+                            "\tEmployeeID INT AUTO_INCREMENT PRIMARY KEY UNIQUE,\n" +
                             "    NamePrefix VARCHAR(5) NOT NULL,\n" +
                             "    FirstName VARCHAR(255) NOT NULL,\n" +
                             "    InitialMiddleName VARCHAR(1) NOT NULL,\n" +
@@ -29,7 +29,7 @@ public class BasicEmployeeDAO implements EmployeeDAO{
                             "    Email VARCHAR(255) NOT NULL,\n" +
                             "    DateOfBirth DATE NOT NULL,\n" +
                             "    DateOfJoining DATE NOT NULL,\n" +
-                            "    Salary INT NOT NULL\n" +
+                            "    Salary DECIMAL(15,2) NOT NULL\n" +
                             ");");
             rs = preparedStatement.executeUpdate();
             preparedStatement.close();
