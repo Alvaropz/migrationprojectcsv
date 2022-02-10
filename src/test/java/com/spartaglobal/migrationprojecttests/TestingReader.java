@@ -1,7 +1,7 @@
 package com.spartaglobal.migrationprojecttests;
 
 
-import com.spartaglobal.DuplicatesHandler;
+import com.spartaglobal.migrationproject.DuplicatesHandler;
 import com.spartaglobal.migrationproject.ReadFromCSV;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
