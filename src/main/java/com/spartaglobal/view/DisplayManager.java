@@ -23,7 +23,7 @@ public class DisplayManager {
                     break;
                 }
             } catch (NumberFormatException e) {
-                System.exit(1);
+                System.out.println("Invalid data");
             }
         }
         return number;
