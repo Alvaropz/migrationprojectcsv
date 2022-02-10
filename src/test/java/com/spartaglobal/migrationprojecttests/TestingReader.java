@@ -1,6 +1,7 @@
 package com.spartaglobal.migrationprojecttests;
 
 
+import com.spartaglobal.DuplicatesHandler;
 import com.spartaglobal.migrationproject.ReadFromCSV;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -30,7 +31,7 @@ public class TestingReader {
         ArrayList<String[]> al =  frc.read("test2");
         ArrayList<String[]> Actual = new ArrayList<>();
 
-        Assertions.assertEquals(1, frc.duplicateCheck(al));
+        Assertions.assertEquals(1, DuplicatesHandler.duplicateCheck(al));
     }
 
     @Test
@@ -41,6 +42,6 @@ public class TestingReader {
         ArrayList<String[]> al =  frc.read("test3");
         ArrayList<String[]> Actual = new ArrayList<>();
 
-        Assertions.assertEquals(0, frc.duplicateCheck(al));
+        Assertions.assertEquals(0, DuplicatesHandler.duplicateCheck(al));
     }
 }
