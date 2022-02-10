@@ -37,17 +37,25 @@ public class CSVEmployeeDAO implements EmployeeDAO{
             e.printStackTrace();
         }
     }
-
+    PreparedStatement preparedStatement;
+    Connection connection;
     @Override
     public void insertEmployee(ArrayList<String[]> data) {
-        PreparedStatement preparedStatement = null;
+        try {
+            connection = CSVDAOFactory.getConnectionDAO();
+            preparedStatement = connection.prepareStatement("INSERT INTO employees (EmployeeID, NamePrefix, FirstName, InitialMiddleName, LastName, Gender, Email, DateOfBirth, DateOfJoining, Salary) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         DateFormat userDateFormat = new SimpleDateFormat("MM/dd/yyyy");
         DateFormat dateFormatNeeded = new SimpleDateFormat("yyyy-mm-dd");
         Date date;
         String convertedDate;
         int rowsAffected = 0;
         try {
-            Connection connection = CSVDAOFactory.getConnectionDAO();
             for (String[] employeeArray : data) {
                 preparedStatement = connection.prepareStatement("INSERT INTO employees (EmployeeID, NamePrefix, FirstName, InitialMiddleName, LastName, Gender, Email, DateOfBirth, DateOfJoining, Salary) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
                 preparedStatement.setInt(1, Integer.parseInt(employeeArray[0]));
@@ -67,11 +75,54 @@ public class CSVEmployeeDAO implements EmployeeDAO{
                 rowsAffected = preparedStatement.executeUpdate();
             }
             preparedStatement.close();
-        } catch (SQLException|IOException|ParseException e) {
+        } catch (SQLException| ParseException e) {
             e.printStackTrace();
         }
     }
 
+    public void insertIndivual(String[] employeeInfo)
+    {
+        DateFormat userDateFormat = new SimpleDateFormat("MM/dd/yyyy");
+        DateFormat dateFormatNeeded = new SimpleDateFormat("yyyy-mm-dd");
+        Date date;
+        String convertedDate;
+        int rowsAffected = 0;
+        try {
+            preparedStatement = connection.prepareStatement("INSERT INTO employees (EmployeeID, NamePrefix, FirstName, InitialMiddleName, LastName, Gender, Email, DateOfBirth, DateOfJoining, Salary) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            preparedStatement.setInt(1, Integer.parseInt(employeeInfo[0]));
+            preparedStatement.setString(2, employeeInfo[1]);
+            preparedStatement.setString(3, employeeInfo[2]);
+            preparedStatement.setString(4, employeeInfo[3]);
+            preparedStatement.setString(5, employeeInfo[4]);
+            preparedStatement.setString(6, employeeInfo[5]);
+            preparedStatement.setString(7, employeeInfo[6]);
+            date = userDateFormat.parse(employeeInfo[7]);
+            convertedDate = dateFormatNeeded.format(date);
+            preparedStatement.setString(8, convertedDate);
+            date = userDateFormat.parse(employeeInfo[7]);
+            convertedDate = dateFormatNeeded.format(date);
+            preparedStatement.setString(9, convertedDate);
+            preparedStatement.setInt(10, Integer.parseInt(employeeInfo[9]));
+            rowsAffected = preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void initialise()
+    {
+        try {
+            connection = CSVDAOFactory.getConnectionDAO();
+            preparedStatement = connection.prepareStatement("INSERT INTO employees (EmployeeID, NamePrefix, FirstName, InitialMiddleName, LastName, Gender, Email, DateOfBirth, DateOfJoining, Salary) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
     @Override
     public ArrayList<String[]> selectAllEmployees() {
         Statement statement = null;

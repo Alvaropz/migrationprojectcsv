@@ -1,6 +1,7 @@
 package com.spartaglobal.migrationproject;
 
 import com.spartaglobal.database.CSVDAOFactory;
+import com.spartaglobal.database.CSVEmployeeDAO;
 import com.spartaglobal.database.DAOFactory;
 import com.spartaglobal.database.EmployeeDAO;
 
@@ -17,7 +18,10 @@ public class Example {
         ArrayList<String[]> data = ReadFromCSV.read("EmployeeRecords.csv");
         List<String> duplicates = DuplicatesHandler.arrayDuplicates(data);
         data = DuplicatesHandler.filterDuplicates(data, duplicates);
+        Long Starttime = System.nanoTime();
         employeedao.insertEmployee(data);
+        Long endTime = System.nanoTime() - Starttime;
+        System.out.println(endTime);
         ArrayList<String[]> retrievedData = employeedao.selectAllEmployees();
         StringBuffer dataEmployee = new StringBuffer();
         for (String[] employeeRow : retrievedData) {
