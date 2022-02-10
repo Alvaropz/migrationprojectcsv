@@ -7,9 +7,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public class BasicDAOFactory extends DAOFactory{
+public class CSVDAOFactory extends DAOFactory{
 
-    BasicDAOFactory() {}
+    CSVDAOFactory() {}
 
     private static Connection connection = null;
 
@@ -27,7 +27,7 @@ public class BasicDAOFactory extends DAOFactory{
 
     @Override
     public EmployeeDAO getEmployeeDAO() {
-        return new BasicEmployeeDAO();
+        return new CSVEmployeeDAO();
     }
 
     public static void closeConnection() throws SQLException{

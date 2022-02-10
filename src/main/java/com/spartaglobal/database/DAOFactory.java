@@ -10,7 +10,7 @@ public abstract class DAOFactory {
 
         switch (whichFactory) {
             case CSV:
-                return new BasicDAOFactory();
+                return new CSVDAOFactory();
             default:
                 return null;
         }

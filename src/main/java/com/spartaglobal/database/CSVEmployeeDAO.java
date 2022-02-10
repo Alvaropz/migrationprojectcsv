@@ -8,14 +8,14 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
-public class BasicEmployeeDAO implements EmployeeDAO{
+public class CSVEmployeeDAO implements EmployeeDAO{
 
     @Override
     public void createEmployeesTable() {
         PreparedStatement preparedStatement = null;
         int rs;
         try {
-            Connection connection = BasicDAOFactory.getConnectionDAO();
+            Connection connection = CSVDAOFactory.getConnectionDAO();
             preparedStatement = connection.prepareStatement("DROP TABLE IF EXISTS employees");
             rs = preparedStatement.executeUpdate();
             preparedStatement = connection.prepareStatement(
@@ -47,7 +47,7 @@ public class BasicEmployeeDAO implements EmployeeDAO{
         String convertedDate;
         int rowsAffected = 0;
         try {
-            Connection connection = BasicDAOFactory.getConnectionDAO();
+            Connection connection = CSVDAOFactory.getConnectionDAO();
             for (String[] employeeArray : data) {
                 preparedStatement = connection.prepareStatement("INSERT INTO employees (EmployeeID, NamePrefix, FirstName, InitialMiddleName, LastName, Gender, Email, DateOfBirth, DateOfJoining, Salary) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
                 preparedStatement.setInt(1, Integer.parseInt(employeeArray[0]));
@@ -78,7 +78,7 @@ public class BasicEmployeeDAO implements EmployeeDAO{
         ResultSet rs = null;
         ArrayList<String[]> retrievedData = new ArrayList<>();
         try {
-            Connection connection = BasicDAOFactory.getConnectionDAO();
+            Connection connection = CSVDAOFactory.getConnectionDAO();
 
             statement = connection.createStatement();
             rs = statement.executeQuery("SELECT * FROM employees");

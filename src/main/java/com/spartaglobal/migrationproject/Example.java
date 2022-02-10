@@ -1,6 +1,6 @@
 package com.spartaglobal.migrationproject;
 
-import com.spartaglobal.database.BasicDAOFactory;
+import com.spartaglobal.database.CSVDAOFactory;
 import com.spartaglobal.database.DAOFactory;
 import com.spartaglobal.database.EmployeeDAO;
 
@@ -36,7 +36,7 @@ public class Example {
             dataEmployee.append("\n");
         }
         try {
-            BasicDAOFactory.closeConnection();
+            CSVDAOFactory.closeConnection();
         } catch (SQLException e) {
             e.printStackTrace();
         }
