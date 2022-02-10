@@ -1,4 +1,4 @@
-package com.spartaglobal;
+package com.spartaglobal.view;
 
 import com.spartaglobal.database.CSVEmployeeDAO;
 

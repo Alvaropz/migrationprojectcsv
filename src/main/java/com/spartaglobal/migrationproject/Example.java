@@ -1,6 +1,6 @@
 package com.spartaglobal.migrationproject;
 
-import com.spartaglobal.DisplayManager;
+import com.spartaglobal.view.DisplayManager;
 import com.spartaglobal.database.CSVDAOFactory;
 import com.spartaglobal.database.DAOFactory;
 import com.spartaglobal.database.EmployeeDAO;
