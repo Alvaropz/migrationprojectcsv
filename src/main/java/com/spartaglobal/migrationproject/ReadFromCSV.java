@@ -12,7 +12,7 @@ public class ReadFromCSV {
         try (BufferedReader br = new BufferedReader(new FileReader(csv))) {
             String line;
             while ((line = br.readLine()) != null) {
-                System.out.println(Arrays.toString(line.split(",")));
+
                 String[] lines = (line.split(","));
                 data.add(lines);
             }

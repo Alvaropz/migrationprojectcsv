@@ -59,7 +59,6 @@ public abstract class DuplicatesHandler {
     }
 
     public static ArrayList<String[]> filterDuplicates(ArrayList<String[]> data, List<String> duplicates) {
-        System.out.println(duplicates);
         for (Iterator<String[]> iterator = data.iterator(); iterator.hasNext();) {
             String[] row = iterator.next();
             if(duplicates.contains(row[0])) {
@@ -67,7 +66,6 @@ public abstract class DuplicatesHandler {
                 duplicates.remove(row[0]);
             }
         }
-        System.out.println(duplicates);
         return data;
     }
 }
