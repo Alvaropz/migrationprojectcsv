@@ -22,5 +22,4 @@ public class ReadFromCSV {
         System.out.println(data);
         return data;
     }
-
 }
