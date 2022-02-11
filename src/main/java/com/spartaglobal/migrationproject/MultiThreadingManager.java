@@ -49,28 +49,27 @@ public class MultiThreadingManager {
 
 
         //get the amount of lines in the file and then how many each thread will handle
-        Path path = Paths.get("EmployeeRecords.CSV");
-        int Fullstacksize = 0;
-        try {
-            Fullstacksize = (int) Files.lines(path).count();
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        int Fullstacksize = (int) data.stream().count();
         int arrayStackSize = Fullstacksize/amountOfThreads;
         int stackCounter = 0;
         for(int i = 0; i < amountOfThreads; i++)
         {
             CSVEmployeeDAO CSV = new CSVEmployeeDAO();
             MyThread newThread;
+
             if(i+1 == amountOfThreads)
             {
                 newThread = new MyThread(CSV, stackCounter, (int) data.stream().count(), data);
+                System.out.println(stackCounter + " " + data.stream().count());
+
             }
             else
             {
                 int endPos = stackCounter+arrayStackSize;
-                newThread = new MyThread(CSV, stackCounter+1, endPos, data);
+                System.out.println(stackCounter + " " + endPos);
+
+                newThread = new MyThread(CSV, stackCounter, endPos, data);
                 stackCounter += arrayStackSize;
             }
             allThreads.add(newThread);
