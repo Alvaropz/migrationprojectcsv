@@ -21,7 +21,12 @@ public class MultiThreadingManager {
         data = DuplicatesHandler.filterDuplicates(data, DuplicatesHandler.arrayDuplicates(data));
 
         ArrayList<MyThread> threads = loadThreads(10, data);
+        runThreads(threads);
 
+    }
+
+    public static void runThreads(ArrayList<MyThread> threads)
+    {
         ArrayList<Thread> allThreads = new ArrayList<>();
         //threads.get(0).run();
         Long Starttime = System.nanoTime();
