@@ -17,7 +17,11 @@ public class Example {
         ArrayList<String[]> data = ReadFromCSV.read("EmployeeRecords.csv");
         List<String> duplicates = DuplicatesHandler.arrayDuplicates(data);
         data = DuplicatesHandler.filterDuplicates(data, duplicates);
+
+        long startTime = System.nanoTime();
         employeedao.insertEmployee(data);
+        long endTime = System.nanoTime() - startTime;
+
         ArrayList<String[]> retrievedData = employeedao.selectAllEmployees();
         StringBuffer dataEmployee = new StringBuffer();
         for (String[] employeeRow : retrievedData) {
@@ -31,5 +35,7 @@ public class Example {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        System.out.println(dataEmployee);
+        System.out.println(endTime);
     }
 }
