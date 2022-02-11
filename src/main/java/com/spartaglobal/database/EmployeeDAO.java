@@ -6,4 +6,5 @@ public interface EmployeeDAO {
     void createEmployeesTable();
     void insertEmployee(ArrayList<String[]> data);
     ArrayList<String[]> selectAllEmployees();
+    ArrayList<String[]> selectOneEmployee(String employeeID);
 }
