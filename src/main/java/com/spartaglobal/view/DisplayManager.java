@@ -43,9 +43,8 @@ public class DisplayManager {
             try {
                 EmployeeID = Integer.parseInt(input);
                 retrievedData = connection.selectOneEmployee(input);
-                DisplayManager employeeView = new DisplayManager();
                 try {
-                    employeeView.displayResults(retrievedData);
+                    DisplayManager.displayResults(retrievedData);
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
@@ -55,8 +54,7 @@ public class DisplayManager {
         }
     }
 
-
-    public void displayResults(ArrayList<String[]> data) throws ParseException {
+    public void displayResultsChoice(ArrayList<String[]> data) {
         Scanner scanner = new Scanner(System.in);
         String input = "";
         while (!input.equals("y") && !input.equals("n")) {
@@ -64,20 +62,29 @@ public class DisplayManager {
             input = scanner.next().toLowerCase();
         }
         if (input.equals("y")) {
-            SimpleDateFormat sdfSource = new SimpleDateFormat("yyyy-MM-dd");
-            SimpleDateFormat sdfDestination = new SimpleDateFormat("dd/MM/yyyy");
-            Date dobDate;
-            Date dojDate;
-            String dob;
-            String doj;
-            System.out.printf("%-15s%-20s%-20s%-20s%-20s%-10s%-40s%-20s%-20s%-20s\n", "Employee ID", "Courtesy Title", "First Name", "MN Initial", "Last Name", "Gender", "Email", "Date Of Birth", "Date of Joining", "Salary");
-            for (String[] employeeRow : data) {
-                dobDate = sdfSource.parse(employeeRow[7]);
-                dojDate = sdfSource.parse(employeeRow[8]);
-                dob = sdfDestination.format(dobDate);
-                doj = sdfDestination.format(dojDate);
-                System.out.format("%-15s%-20s%-20s%-20s%-20s%-10s%-40s%-20s%-20s%-20s\n", employeeRow[0], employeeRow[1], employeeRow[2], employeeRow[3], employeeRow[4], employeeRow[5], employeeRow[6], dob, doj, employeeRow[9]);
+            try {
+                DisplayManager.displayResults(data);
+            } catch (ParseException e) {
+                e.printStackTrace();
             }
+        }
+    }
+
+
+    public static void displayResults(ArrayList<String[]> data) throws ParseException {
+        SimpleDateFormat sdfSource = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat sdfDestination = new SimpleDateFormat("dd/MM/yyyy");
+        Date dobDate;
+        Date dojDate;
+        String dob;
+        String doj;
+        System.out.printf("%-15s%-20s%-20s%-20s%-20s%-10s%-40s%-20s%-20s%-20s\n", "Employee ID", "Courtesy Title", "First Name", "MN Initial", "Last Name", "Gender", "Email", "Date Of Birth", "Date of Joining", "Salary");
+        for (String[] employeeRow : data) {
+            dobDate = sdfSource.parse(employeeRow[7]);
+            dojDate = sdfSource.parse(employeeRow[8]);
+            dob = sdfDestination.format(dobDate);
+            doj = sdfDestination.format(dojDate);
+            System.out.format("%-15s%-20s%-20s%-20s%-20s%-10s%-40s%-20s%-20s%-20s\n", employeeRow[0], employeeRow[1], employeeRow[2], employeeRow[3], employeeRow[4], employeeRow[5], employeeRow[6], dob, doj, employeeRow[9]);
         }
     }
 }

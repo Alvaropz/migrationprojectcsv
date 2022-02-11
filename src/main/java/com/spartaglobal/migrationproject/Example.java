@@ -23,7 +23,7 @@ public class Example {
         ArrayList<String[]> retrievedData = employeedao.selectAllEmployees();
         DisplayManager view = new DisplayManager();
         view.dataOneEmployee();
-        view.displayResults(retrievedData);
+        view.displayResultsChoice(retrievedData);
         try {
             CSVDAOFactory.closeConnection();
         } catch (SQLException e) {
