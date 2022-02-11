@@ -37,17 +37,25 @@ public class CSVEmployeeDAO implements EmployeeDAO{
             e.printStackTrace();
         }
     }
-
+    PreparedStatement preparedStatement;
+    Connection connection;
     @Override
     public void insertEmployee(ArrayList<String[]> data) {
-        PreparedStatement preparedStatement = null;
+        try {
+            connection = CSVDAOFactory.getConnectionDAO();
+            preparedStatement = connection.prepareStatement("INSERT INTO employees (EmployeeID, NamePrefix, FirstName, InitialMiddleName, LastName, Gender, Email, DateOfBirth, DateOfJoining, Salary) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         DateFormat userDateFormat = new SimpleDateFormat("MM/dd/yyyy");
-        DateFormat dateFormatNeeded = new SimpleDateFormat("yyyy-mm-dd");
+        DateFormat dateFormatNeeded = new SimpleDateFormat("yyyy-MM-dd");
         Date date;
         String convertedDate;
         int rowsAffected = 0;
         try {
-            Connection connection = CSVDAOFactory.getConnectionDAO();
             for (String[] employeeArray : data) {
                 preparedStatement = connection.prepareStatement("INSERT INTO employees (EmployeeID, NamePrefix, FirstName, InitialMiddleName, LastName, Gender, Email, DateOfBirth, DateOfJoining, Salary) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
                 preparedStatement.setInt(1, Integer.parseInt(employeeArray[0]));
@@ -60,18 +68,61 @@ public class CSVEmployeeDAO implements EmployeeDAO{
                 date = userDateFormat.parse(employeeArray[7]);
                 convertedDate = dateFormatNeeded.format(date);
                 preparedStatement.setString(8, convertedDate);
-                date = userDateFormat.parse(employeeArray[7]);
+                date = userDateFormat.parse(employeeArray[8]);
                 convertedDate = dateFormatNeeded.format(date);
                 preparedStatement.setString(9, convertedDate);
                 preparedStatement.setInt(10, Integer.parseInt(employeeArray[9]));
                 rowsAffected = preparedStatement.executeUpdate();
             }
             preparedStatement.close();
-        } catch (SQLException|IOException|ParseException e) {
+        } catch (SQLException| ParseException e) {
             e.printStackTrace();
         }
     }
 
+    public void insertIndivual(String[] employeeInfo)
+    {
+        DateFormat userDateFormat = new SimpleDateFormat("MM/dd/yyyy");
+        DateFormat dateFormatNeeded = new SimpleDateFormat("yyyy-mm-dd");
+        Date date;
+        String convertedDate;
+        int rowsAffected = 0;
+        try {
+            preparedStatement = connection.prepareStatement("INSERT INTO employees (EmployeeID, NamePrefix, FirstName, InitialMiddleName, LastName, Gender, Email, DateOfBirth, DateOfJoining, Salary) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            preparedStatement.setInt(1, Integer.parseInt(employeeInfo[0]));
+            preparedStatement.setString(2, employeeInfo[1]);
+            preparedStatement.setString(3, employeeInfo[2]);
+            preparedStatement.setString(4, employeeInfo[3]);
+            preparedStatement.setString(5, employeeInfo[4]);
+            preparedStatement.setString(6, employeeInfo[5]);
+            preparedStatement.setString(7, employeeInfo[6]);
+            date = userDateFormat.parse(employeeInfo[7]);
+            convertedDate = dateFormatNeeded.format(date);
+            preparedStatement.setString(8, convertedDate);
+            date = userDateFormat.parse(employeeInfo[7]);
+            convertedDate = dateFormatNeeded.format(date);
+            preparedStatement.setString(9, convertedDate);
+            preparedStatement.setInt(10, Integer.parseInt(employeeInfo[9]));
+            rowsAffected = preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void initialise()
+    {
+        try {
+            connection = CSVDAOFactory.getConnectionDAO();
+            preparedStatement = connection.prepareStatement("INSERT INTO employees (EmployeeID, NamePrefix, FirstName, InitialMiddleName, LastName, Gender, Email, DateOfBirth, DateOfJoining, Salary) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
     @Override
     public ArrayList<String[]> selectAllEmployees() {
         Statement statement = null;
@@ -87,6 +138,29 @@ public class CSVEmployeeDAO implements EmployeeDAO{
             }
             rs.close();
             statement.close();
+        } catch (SQLException|IOException e) {
+            e.printStackTrace();
+        }
+        return retrievedData;
+    }
+
+    @Override
+    public ArrayList<String[]> selectOneEmployee(String EmployeeID) {
+        PreparedStatement preparedStatement = null;
+        ResultSet rs = null;
+        ArrayList<String[]> retrievedData = new ArrayList<>();
+
+        try {
+            Connection connection = CSVDAOFactory.getConnectionDAO();
+            preparedStatement = connection.prepareStatement("SELECT * FROM employees WHERE EmployeeID=?");
+            preparedStatement.setString(1, EmployeeID);
+            rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                retrievedData.add(new String[]{rs.getString("EmployeeID"), rs.getString("NamePrefix"), rs.getString("FirstName"), rs.getString("InitialMiddleName"), rs.getString("LastName"), rs.getString("Gender"), rs.getString("Email"), rs.getString("DateOfBirth"), rs.getString("DateOfJoining"), rs.getString("Salary")});
+            }
+
+            rs.close();
+            preparedStatement.close();
         } catch (SQLException|IOException e) {
             e.printStackTrace();
         }
