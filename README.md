@@ -19,14 +19,14 @@ To set up the SQL database we followed the Data Access Object ([DAO](https://www
 
 In order to have access to the database, we had to create it first. For simplicity, we created it first in MySQL as shown:
 
-````sql
+```sql
 CREATE DATABASE IF NOT EXISTS employeesdb;
 USE employeesdb;
-````
+```
 
 To allow IntelliJ connecting with MySQL. We had to use the mySQL dependency with all its associated methods:
 
-```java
+```xml
 <dependency>
     <groupId>mysql</groupId>
     <artifactId>mysql-connector-java</artifactId>
@@ -41,13 +41,12 @@ dburl=jdbc:mysql://localhost:3306/employeesdb
 dbuserid=root
 dbpassword=password1
 ````
-*Disclaimer: The information is separated in a different file to avoid information leaks. Be aware always of not sharing this information in public spaces such as GitHub.*
+<span style="font-size: xx-small; "> *Disclaimer: The information is separated in a different file to avoid information leaks. Be aware always of not sharing this information in public spaces such as GitHub.*</span> 
+
 
 Once the connection is set, the program will create the *CSVEmployeeDAO* instance that will make possible for having access to the methods that creates and updates the table, and retrieves the data from it.
 
 #### How to use the program
-
-
 #### Creation phases
 #### Performance testing/effect of multithreading/optimal thread number
 #### Testing file reader / SQL data transfer / multithreading / functional programming

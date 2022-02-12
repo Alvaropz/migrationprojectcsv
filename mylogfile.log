@@ -97,3 +97,56 @@ FILE [INFO ] 11:59 CSVEmployeeDAO Logger - Employees table created in the databa
 FILE [INFO ] 12:00 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
 FILE [INFO ] 12:00 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
 FILE [INFO ] 12:00 CSVEmployeeDAO Logger - Database connection close
+FILE [INFO ] 12:29 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 12:29 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 12:29 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 12:29 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 12:29 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 12:29 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 12:29 Viewer Logger - displayDuplicates - Gives the option of printing an Array of Duplicates
+FILE [INFO ] 12:30 CSVEmployeeDAO Logger - Database connection close
+FILE [INFO ] 12:30 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 12:30 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 12:30 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 12:30 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 12:30 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 12:31 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 12:31 Viewer Logger - displayDuplicates - Gives the option of printing an Array of Duplicates
+FILE [INFO ] 12:31 CSVEmployeeDAO Logger - Database connection close
+FILE [INFO ] 12:38 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 12:38 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 12:38 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 12:38 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 12:38 Viewer Logger - displayDuplicates - Gives the option of printing an Array of Duplicates
+FILE [INFO ] 12:38 CSVEmployeeDAO Logger - Database connection close
+FILE [INFO ] 12:39 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 12:39 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 12:39 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 12:39 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 12:39 Viewer Logger - displayDuplicates - Gives the option of printing an Array of Duplicates
+FILE [INFO ] 12:39 CSVEmployeeDAO Logger - Database connection close
+FILE [INFO ] 12:42 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 12:42 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 12:42 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 12:42 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 12:42 CSVEmployeeDAO Logger - Database connection close
+FILE [INFO ] 12:43 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 12:43 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 12:43 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 12:43 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 12:43 CSVEmployeeDAO Logger - Database connection close
+FILE [INFO ] 12:46 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 12:46 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 12:46 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 12:46 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 12:46 CSVEmployeeDAO Logger - Database connection close
+FILE [INFO ] 12:48 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 12:48 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 12:48 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 12:48 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 12:48 CSVEmployeeDAO Logger - Database connection close
+FILE [INFO ] 12:51 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 12:51 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 12:51 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 12:51 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 12:51 CSVEmployeeDAO Logger - Database connection close

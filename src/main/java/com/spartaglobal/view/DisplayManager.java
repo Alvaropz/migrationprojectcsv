@@ -6,9 +6,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Scanner;
+import java.util.*;
 
 public class DisplayManager {
     private static Logger logger = LogManager.getLogger("Viewer Logger");
@@ -34,11 +32,41 @@ public class DisplayManager {
         return number;
     }
 
+    public void displayDuplicates(List<String> duplicates) {
+        logger.info("displayDuplicates - Gives the option of printing an Array of Duplicates");
+        Scanner scanner = new Scanner(System.in);
+        String input = "";
+        while (!input.equals("y") && !input.equals("n")) {
+            System.out.print("Do you want to print the duplicates? Please type Y for \"yes\", N for \"no\": ");
+            input = scanner.next().toLowerCase();
+        }
+        if (input.equals("y")){
+            System.out.println(duplicates.toString());
+        }
+    }
+
+    public void displayResultsChoice(ArrayList<String[]> data) {
+        logger.info("displayResultsChoice - Allows the user to choose if display the results");
+        Scanner scanner = new Scanner(System.in);
+        String input = "";
+        while (!input.equals("y") && !input.equals("n")) {
+            System.out.print("Do you want to print the data? Please type Y for \"yes\", N for \"no\": ");
+            input = scanner.next().toLowerCase();
+        }
+        if (input.equals("y")) {
+            try {
+                DisplayManager.displayResults(data);
+            } catch (ParseException e) {
+                logger.error(e.getMessage());
+                e.printStackTrace();
+            }
+        }
+    }
+
     public void dataOneEmployee() {
         logger.info("dataOneEmployee - Data from an employee can be retrieved");
         Scanner scanner = new Scanner(System.in);
         String input = "";
-        int EmployeeID;
 
         ArrayList<String[]> retrievedData = new ArrayList<>();
         CSVEmployeeDAO connection = new CSVEmployeeDAO();
@@ -56,24 +84,6 @@ public class DisplayManager {
         if (retrievedData.size() > 0) {
             try {
                 DisplayManager.displayResults(retrievedData);
-            } catch (ParseException e) {
-                logger.error(e.getMessage());
-                e.printStackTrace();
-            }
-        }
-    }
-
-    public void displayResultsChoice(ArrayList<String[]> data) {
-        logger.info("displayResultsChoice - Allows the user to choose if display the results");
-        Scanner scanner = new Scanner(System.in);
-        String input = "";
-        while (!input.equals("y") && !input.equals("n")) {
-            System.out.print("Do you want to print the data? Please type Y for \"yes\", N for \"no\": ");
-            input = scanner.next().toLowerCase();
-        }
-        if (input.equals("y")) {
-            try {
-                DisplayManager.displayResults(data);
             } catch (ParseException e) {
                 logger.error(e.getMessage());
                 e.printStackTrace();
