@@ -19,7 +19,7 @@ public class CSVDAOFactory extends DAOFactory{
     private static Connection connection = null;
 
     public static Connection getConnectionDAO() throws IOException, SQLException {
-        logger.info("Database connection");
+        logger.info("Database connection created");
         if (connection == null) {
             Properties props = new Properties();
             props.load(new FileReader("mysql.properties"));

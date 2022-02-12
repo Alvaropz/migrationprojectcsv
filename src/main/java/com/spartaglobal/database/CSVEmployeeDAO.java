@@ -13,6 +13,14 @@ import java.util.ArrayList;
 
 public class CSVEmployeeDAO implements EmployeeDAO{
     private static Logger logger = LogManager.getLogger("CSVEmployeeDAO Logger");
+    Connection connection;
+    {
+        try {
+            connection = CSVDAOFactory.getConnectionDAO();
+        } catch (IOException | SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
     @Override
     public void createEmployeesTable() {
@@ -20,7 +28,6 @@ public class CSVEmployeeDAO implements EmployeeDAO{
         PreparedStatement preparedStatement = null;
 
         try {
-            Connection connection = CSVDAOFactory.getConnectionDAO();
             preparedStatement = connection.prepareStatement("DROP TABLE IF EXISTS employees");
             preparedStatement.executeUpdate();
             preparedStatement = connection.prepareStatement(
@@ -38,7 +45,7 @@ public class CSVEmployeeDAO implements EmployeeDAO{
                             ");");
             preparedStatement.executeUpdate();
             preparedStatement.close();
-        } catch (SQLException | IOException e) {
+        } catch (SQLException e) {
             logger.error(e);
             e.printStackTrace();
         }
@@ -53,7 +60,6 @@ public class CSVEmployeeDAO implements EmployeeDAO{
         Date date;
         String convertedDate;
         try {
-            Connection connection = CSVDAOFactory.getConnectionDAO();
             for (String[] employeeArray : data) {
                 preparedStatement = connection.prepareStatement("INSERT INTO employees (EmployeeID, NamePrefix, FirstName, InitialMiddleName, LastName, Gender, Email, DateOfBirth, DateOfJoining, Salary) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
                 preparedStatement.setInt(1, Integer.parseInt(employeeArray[0]));
@@ -73,7 +79,7 @@ public class CSVEmployeeDAO implements EmployeeDAO{
                 preparedStatement.executeUpdate();
             }
             preparedStatement.close();
-        } catch (SQLException|IOException|ParseException e) {
+        } catch (SQLException|ParseException e) {
             logger.error(e);
             e.printStackTrace();
         }
@@ -86,7 +92,6 @@ public class CSVEmployeeDAO implements EmployeeDAO{
         ResultSet rs = null;
         ArrayList<String[]> retrievedData = new ArrayList<>();
         try {
-            Connection connection = CSVDAOFactory.getConnectionDAO();
 
             statement = connection.createStatement();
             rs = statement.executeQuery("SELECT * FROM employees");
@@ -95,7 +100,7 @@ public class CSVEmployeeDAO implements EmployeeDAO{
             }
             rs.close();
             statement.close();
-        } catch (SQLException|IOException e) {
+        } catch (SQLException e) {
             logger.error(e);
             e.printStackTrace();
         }
@@ -110,7 +115,6 @@ public class CSVEmployeeDAO implements EmployeeDAO{
         ArrayList<String[]> retrievedData = new ArrayList<>();
 
         try {
-            Connection connection = CSVDAOFactory.getConnectionDAO();
             preparedStatement = connection.prepareStatement("SELECT * FROM employees WHERE EmployeeID=?");
             preparedStatement.setString(1, EmployeeID);
             rs = preparedStatement.executeQuery();
@@ -120,7 +124,7 @@ public class CSVEmployeeDAO implements EmployeeDAO{
 
             rs.close();
             preparedStatement.close();
-        } catch (SQLException|IOException e) {
+        } catch (SQLException e) {
             logger.error(e);
             e.printStackTrace();
         }
