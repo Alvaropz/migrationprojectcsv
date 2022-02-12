@@ -1,5 +1,8 @@
 package com.spartaglobal.database;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.IOException;
 import java.sql.*;
 import java.text.DateFormat;
@@ -9,15 +12,17 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class CSVEmployeeDAO implements EmployeeDAO{
+    private static Logger logger = LogManager.getLogger("CSVEmployeeDAO Logger");
 
     @Override
     public void createEmployeesTable() {
+        logger.info("Employees table created in the database");
         PreparedStatement preparedStatement = null;
-        int rs;
+
         try {
             Connection connection = CSVDAOFactory.getConnectionDAO();
             preparedStatement = connection.prepareStatement("DROP TABLE IF EXISTS employees");
-            rs = preparedStatement.executeUpdate();
+            preparedStatement.executeUpdate();
             preparedStatement = connection.prepareStatement(
                     "CREATE TABLE employees (\n" +
                             "\tEmployeeID INT AUTO_INCREMENT PRIMARY KEY UNIQUE,\n" +
@@ -31,21 +36,22 @@ public class CSVEmployeeDAO implements EmployeeDAO{
                             "    DateOfJoining DATE NOT NULL,\n" +
                             "    Salary DECIMAL(15,2) NOT NULL\n" +
                             ");");
-            rs = preparedStatement.executeUpdate();
+            preparedStatement.executeUpdate();
             preparedStatement.close();
         } catch (SQLException | IOException e) {
+            logger.error(e);
             e.printStackTrace();
         }
     }
 
     @Override
     public void insertEmployee(ArrayList<String[]> data) {
+        logger.info("Insert an employee data in the Employees table");
         PreparedStatement preparedStatement = null;
         DateFormat userDateFormat = new SimpleDateFormat("MM/dd/yyyy");
         DateFormat dateFormatNeeded = new SimpleDateFormat("yyyy-MM-dd");
         Date date;
         String convertedDate;
-        int rowsAffected = 0;
         try {
             Connection connection = CSVDAOFactory.getConnectionDAO();
             for (String[] employeeArray : data) {
@@ -64,16 +70,18 @@ public class CSVEmployeeDAO implements EmployeeDAO{
                 convertedDate = dateFormatNeeded.format(date);
                 preparedStatement.setString(9, convertedDate);
                 preparedStatement.setInt(10, Integer.parseInt(employeeArray[9]));
-                rowsAffected = preparedStatement.executeUpdate();
+                preparedStatement.executeUpdate();
             }
             preparedStatement.close();
         } catch (SQLException|IOException|ParseException e) {
+            logger.error(e);
             e.printStackTrace();
         }
     }
 
     @Override
     public ArrayList<String[]> selectAllEmployees() {
+        logger.info("Retrieved all records from the Employees Table");
         Statement statement = null;
         ResultSet rs = null;
         ArrayList<String[]> retrievedData = new ArrayList<>();
@@ -88,6 +96,7 @@ public class CSVEmployeeDAO implements EmployeeDAO{
             rs.close();
             statement.close();
         } catch (SQLException|IOException e) {
+            logger.error(e);
             e.printStackTrace();
         }
         return retrievedData;
@@ -95,6 +104,7 @@ public class CSVEmployeeDAO implements EmployeeDAO{
 
     @Override
     public ArrayList<String[]> selectOneEmployee(String EmployeeID) {
+        logger.info("Retrieved the information related to one employee from the Employees Table");
         PreparedStatement preparedStatement = null;
         ResultSet rs = null;
         ArrayList<String[]> retrievedData = new ArrayList<>();
@@ -111,6 +121,7 @@ public class CSVEmployeeDAO implements EmployeeDAO{
             rs.close();
             preparedStatement.close();
         } catch (SQLException|IOException e) {
+            logger.error(e);
             e.printStackTrace();
         }
         return retrievedData;

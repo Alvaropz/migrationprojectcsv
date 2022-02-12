@@ -2,3 +2,66 @@ FILE [INFO ] 15:21 Sort Manager Logger - This is a test log to a file
 FILE [INFO ] 15:36 Sort Manager Logger - This is a test log to a file
 FILE [INFO ] 15:37 Sort Manager Logger - This is a test log to a file 1
 FILE [INFO ] 15:38 Sort Manager Logger - This is a test log to a file 2
+FILE [INFO ] 16:03 Viewer Logger - dataOneEmployee - Data from an employee can be retrieved
+FILE [INFO ] 16:03 Viewer Logger - Display Results
+FILE [INFO ] 16:03 Viewer Logger - Display Results
+FILE [INFO ] 16:04 Viewer Logger - displayResultsChoice - Allows the user to choose if display the results
+FILE [INFO ] 16:10 CSVEmployeeDAO Logger - Employees' Table created in the database
+FILE [ERROR] 16:10 CSVEmployeeDAO Logger - java.sql.SQLSyntaxErrorException: Table 'employees' already exists
+FILE [INFO ] 16:13 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 16:13 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 16:14 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 16:14 Viewer Logger - dataOneEmployee - Data from an employee can be retrieved
+FILE [INFO ] 16:15 CSVEmployeeDAO Logger - Retrieved the information related to one employee from the Employees Table
+FILE [INFO ] 16:15 Viewer Logger - Display Results
+FILE [INFO ] 16:15 Viewer Logger - displayResultsChoice - Allows the user to choose if display the results
+FILE [INFO ] 16:15 Viewer Logger - Display Results
+FILE [INFO ] 16:23 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 16:23 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 16:23 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 16:23 Viewer Logger - dataOneEmployee - Data from an employee can be retrieved
+FILE [INFO ] 16:24 CSVEmployeeDAO Logger - Retrieved the information related to one employee from the Employees Table
+FILE [INFO ] 16:24 Viewer Logger - Display Results
+FILE [INFO ] 16:24 Viewer Logger - displayResultsChoice - Allows the user to choose if display the results
+FILE [INFO ] 16:24 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 16:24 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 16:25 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 16:25 Viewer Logger - dataOneEmployee - Data from an employee can be retrieved
+FILE [INFO ] 16:25 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 16:25 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 16:26 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 16:26 Viewer Logger - dataOneEmployee - Data from an employee can be retrieved
+FILE [INFO ] 16:27 CSVEmployeeDAO Logger - Retrieved the information related to one employee from the Employees Table
+FILE [INFO ] 16:27 Viewer Logger - Display Results
+FILE [INFO ] 16:27 Viewer Logger - displayResultsChoice - Allows the user to choose if display the results
+FILE [INFO ] 16:27 Viewer Logger - Display Results
+FILE [INFO ] 16:53 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 16:55 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 16:55 Viewer Logger - dataOneEmployee - Data from an employee can be retrieved
+FILE [INFO ] 16:55 CSVEmployeeDAO Logger - Retrieved the information related to one employee from the Employees Table
+FILE [INFO ] 16:55 Viewer Logger - Display Results
+FILE [INFO ] 16:56 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 16:56 Viewer Logger - dataOneEmployee - Data from an employee can be retrieved
+FILE [INFO ] 16:56 CSVEmployeeDAO Logger - Retrieved the information related to one employee from the Employees Table
+FILE [INFO ] 16:56 Viewer Logger - Display Results
+FILE [INFO ] 16:56 CSVEmployeeDAO Logger - Retrieved the information related to one employee from the Employees Table
+FILE [INFO ] 16:56 Viewer Logger - Display Results
+FILE [INFO ] 16:56 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 16:56 Viewer Logger - dataOneEmployee - Data from an employee can be retrieved
+FILE [INFO ] 16:56 CSVEmployeeDAO Logger - Retrieved the information related to one employee from the Employees Table
+FILE [INFO ] 16:57 CSVEmployeeDAO Logger - Retrieved the information related to one employee from the Employees Table
+FILE [INFO ] 16:57 CSVEmployeeDAO Logger - Retrieved the information related to one employee from the Employees Table
+FILE [INFO ] 16:57 CSVEmployeeDAO Logger - Retrieved the information related to one employee from the Employees Table
+FILE [INFO ] 16:57 Viewer Logger - Display Results
+FILE [INFO ] 16:57 Viewer Logger - displayResultsChoice - Allows the user to choose if display the results
+FILE [INFO ] 16:57 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 16:57 Viewer Logger - dataOneEmployee - Data from an employee can be retrieved
+FILE [INFO ] 16:57 CSVEmployeeDAO Logger - Retrieved the information related to one employee from the Employees Table
+FILE [INFO ] 16:57 Viewer Logger - displayResultsChoice - Allows the user to choose if display the results
+FILE [INFO ] 16:58 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 16:58 Viewer Logger - dataOneEmployee - Data from an employee can be retrieved
+FILE [INFO ] 16:58 CSVEmployeeDAO Logger - Retrieved the information related to one employee from the Employees Table
+FILE [INFO ] 16:58 CSVEmployeeDAO Logger - Retrieved the information related to one employee from the Employees Table
+FILE [INFO ] 16:58 Viewer Logger - Display Results
+FILE [INFO ] 16:58 Viewer Logger - displayResultsChoice - Allows the user to choose if display the results
+FILE [INFO ] 16:58 Viewer Logger - Display Results
