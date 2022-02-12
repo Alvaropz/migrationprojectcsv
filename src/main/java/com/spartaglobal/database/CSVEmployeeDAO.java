@@ -24,16 +24,6 @@ public class CSVEmployeeDAO implements EmployeeDAO{
         }
     }
 
-//    public void initialise() {
-//        logger.info("Connection between the program and MySQL initialised");
-//        try {
-//            connection = CSVDAOFactory.getConnectionDAO();
-//        } catch (IOException | SQLException e) {
-//            logger.error(e);
-//            e.printStackTrace();
-//        }
-//    }
-
     public void initialise() {
         logger.info("Connection between the program and MySQL initialised");
         try {
