@@ -3,6 +3,8 @@ package com.spartaglobal.migrationproject;
 import com.spartaglobal.database.CSVEmployeeDAO;
 import com.spartaglobal.database.DAOFactory;
 import com.spartaglobal.database.EmployeeDAO;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -10,7 +12,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
+import static com.mysql.cj.conf.PropertyKey.logger;
+
 public class MultiThreadingManager {
+
+    public static Logger logger = LogManager.getLogger("ThreadingManager");
 
     public static void main(String[] args) {
         DAOFactory factoryType = DAOFactory.getDAOFactory();
@@ -36,7 +42,6 @@ public class MultiThreadingManager {
             newThread.start();
         }
         Long endTime = System.nanoTime() - Starttime;
-
         for (Thread t: allThreads) {
             try {
                 t.join();
@@ -44,7 +49,7 @@ public class MultiThreadingManager {
                 e.printStackTrace();
             }
         }
-
+        logger.info("System was ran for " + allThreads.stream().count() + " which took a total of: " + endTime + " nanoseconds");
         System.out.println("Finishing " + endTime);
     }
     //takes in the amount of threads to use, and then runs them

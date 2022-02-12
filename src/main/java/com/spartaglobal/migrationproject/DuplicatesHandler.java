@@ -31,15 +31,13 @@ public abstract class DuplicatesHandler {
                 }
             }
         }
-        System.out.println("number of Duplicates: "+duplicates);
-        System.out.println("dup"+dupids);
-        System.out.println("safe"+safe);
         return duplicates;
     }
 
         public static List<String> arrayDuplicates(ArrayList<String[]> data){
         data.remove(0);
         List<String> dupids = new ArrayList<>();
+        int dups = 0;
         for(String[] i : data) {
             String id = i[0];
             int f = 0;
@@ -50,6 +48,7 @@ public abstract class DuplicatesHandler {
                 if (x[0].equals(id)) {
                     f++;
                     if (f > 1 && dupids.contains(id) == false) {
+                        dups++;
                         dupids.add(id);
                     }
                 }
