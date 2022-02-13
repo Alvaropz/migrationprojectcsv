@@ -32,16 +32,25 @@ public class DisplayManager {
         return number;
     }
 
-    public void displayDuplicates(List<String> duplicates) {
+    public void displayDuplicates(List<String> duplicates, int totalDuplicates) {
         logger.info("displayDuplicates - Gives the option of printing an Array of Duplicates");
-        Scanner scanner = new Scanner(System.in);
-        String input = "";
-        while (!input.equals("y") && !input.equals("n")) {
-            System.out.print("Do you want to print the duplicates? Please type Y for \"yes\", N for \"no\": ");
-            input = scanner.next().toLowerCase();
-        }
-        if (input.equals("y")){
-            System.out.println(duplicates.toString());
+        if (totalDuplicates == 0) {
+            System.out.println("There are no duplicates in the file used.");
+        } else if (totalDuplicates > 0) {
+            if (totalDuplicates == 1) {
+                System.out.println("There is only one duplicate in the file used.");
+            } else {
+                System.out.println("There are a total of " + totalDuplicates + "in the file used");
+            }
+            Scanner scanner = new Scanner(System.in);
+            String input = "";
+            while (!input.equals("y") && !input.equals("n")) {
+                System.out.print("Do you want to print the duplicates? Please type Y for \"yes\", N for \"no\": ");
+                input = scanner.next().toLowerCase();
+            }
+            if (input.equals("y")){
+                System.out.println(duplicates.toString());
+            }
         }
     }
 

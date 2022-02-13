@@ -48,7 +48,34 @@ Once the connection is set, the program will create the *CSVEmployeeDAO* instanc
 
 #### How to use the program
 #### Creation phases
+
+This project goes through 4 phases:
+
+* Phase 1 - Initial Reading and Cleaning
+    * The program reads the information from a csv file.
+    * By reading a file and inserting the data into a list of string arrays. Every element in each array is one of the columns' information in the CSV file. Then, the list is returned.
+    * The information is filtered so there are no duplicates. The duplicate data is added to a list for further analysis.
+
+* Phase 2 - Persist to Database
+  * The connection between the program and MySQL is properly handled by the script. So, the methods can be called when needed it.
+  * The data is migrated into a table after being filtered to its corresponding columns. 
+  * The information can be retrieved individually by providing an *Employee ID* or just retrieve all the data.
+
+* Phase 3 - Add Multithreading
+  * Using multithreading allows the program to increase its performance substantially by splitting the reading file into different threads.
+  * The user can choose how many threads wants to use every time they run the program, so they can compare times between different number of threats.
+
+* Phase 4 - Add Streams and Lambdas
+  * To increase performance, there is a second approach to read the CSV file.
+  * This reads the file via the *streams* collections, creates an *Employee* instance for every row.
+  * By using the method in phase one and *streams*, we can compare the time it takes for each approach to run the code.
+
 #### Performance testing/effect of multithreading/optimal thread number
+
 #### Testing file reader / SQL data transfer / multithreading / functional programming
 
 #### Logging with Log4j
+To check if everything is working accordingly to the expected results. We can log the actions of the program, throwing possible *warning* and *errors* that the program might not be able to handle.
+
+<font color="red">INSERT LOG PICTURE OF THE PROGRAM AFTER RUNNING COMPLETELY</font>
+
