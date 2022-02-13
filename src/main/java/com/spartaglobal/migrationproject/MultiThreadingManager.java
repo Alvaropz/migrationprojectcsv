@@ -32,7 +32,7 @@ public class MultiThreadingManager {
         System.out.println("Reading Complete");
 
 
-        ArrayList<MyThread> threads = loadThreads(10, data);
+        ArrayList<MyThread> threads = loadThreads(20, data);
         runThreads(threads);
         Long endTime = System.nanoTime();
         System.out.println("Time for everything " +(endTime - startTime));

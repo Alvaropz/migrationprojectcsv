@@ -1,6 +1,4 @@
 package com.spartaglobal.migrationproject;
-
-import java.sql.Date;
 import java.util.Objects;
 
 public class Employee {
