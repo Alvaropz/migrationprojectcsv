@@ -15,6 +15,8 @@ public class StreamsCompareMain {
         logger.info("Reading methods comparison initialized");
         logger.info("Starting stream reader");
         long streamStartTime = System.nanoTime();
+        StreamsClass stream = new StreamsClass();
+//        ArrayList<Employee> employees
         try {
             List<Employee> records = Files.lines(Path.of("EmployeeRecordsLarge.csv"))
                     .skip(1)

@@ -1,6 +1,7 @@
 package com.spartaglobal.view;
 
 import com.spartaglobal.database.CSVEmployeeDAO;
+import com.spartaglobal.migrationproject.Employee;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -32,7 +33,7 @@ public class DisplayManager {
         return number;
     }
 
-    public void displayDuplicates(List<String> duplicates) {
+    public void displayDuplicates(List<Employee> duplicates) {
         logger.info("displayDuplicates - Gives the option of printing an Array of Duplicates");
         Scanner scanner = new Scanner(System.in);
         String input = "";
@@ -41,7 +42,13 @@ public class DisplayManager {
             input = scanner.next().toLowerCase();
         }
         if (input.equals("y")){
-            System.out.println(duplicates.toString());
+            if(duplicates.isEmpty()){
+                System.out.println("There are no duplicates to show");
+            } else{
+                System.out.println(duplicates);
+                System.out.println("There are: " + duplicates.size() + " duplicates");
+            }
+
         }
     }
 

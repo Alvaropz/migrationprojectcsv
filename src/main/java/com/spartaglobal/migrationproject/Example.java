@@ -32,7 +32,9 @@ public class Example {
 //        System.out.println(data);
         StreamsClass d = new StreamsClass();
         ArrayList<Employee> duplicates = d.getDuplicates();
-       view.displayDuplicates(duplicates);
+        view.displayDuplicates(duplicates);
+
+
 
 
         Long Starttime = System.nanoTime();
