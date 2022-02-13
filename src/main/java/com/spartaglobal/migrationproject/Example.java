@@ -22,11 +22,15 @@ public class Example {
 
         employeedao.createEmployeesTable();
 
-        ArrayList<String[]> data = ReadFromCSV.read("EmployeeRecords.csv");
+//        StreamsClass lambaRead = new StreamsClass();
+//        ArrayList<Employee> data = lambaRead.data();
+
+
+        ArrayList<String[]> data = ReadFromCSV.read("EmployeeRecordsLarge.csv");
         List<String> duplicates = DuplicatesHandler.arrayDuplicates(data);
         view.displayDuplicates(duplicates);
         data = DuplicatesHandler.filterDuplicates(data, duplicates);
-
+        System.out.println(data);
         Long Starttime = System.nanoTime();
         ArrayList<MyThread> threads = MultiThreadingManager.loadThreads(numberOfThreads, data);
         MultiThreadingManager.runThreads(threads);
@@ -41,5 +45,6 @@ public class Example {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
     }
 }
