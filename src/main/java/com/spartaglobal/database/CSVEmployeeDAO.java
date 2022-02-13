@@ -14,8 +14,8 @@ import java.util.ArrayList;
 
 public class CSVEmployeeDAO implements EmployeeDAO{
     private static Logger logger = LogManager.getLogger("CSVEmployeeDAO Logger");
-    Connection connection;
-    PreparedStatement preparedStatement;
+    public Connection connection;
+    public PreparedStatement preparedStatement;
     {
         try {
             connection = CSVDAOFactory.getConnectionDAO();
@@ -106,7 +106,6 @@ public class CSVEmployeeDAO implements EmployeeDAO{
         Date date;
         String convertedDate;
         try {
-            preparedStatement = connection.prepareStatement("INSERT INTO employees (EmployeeID, NamePrefix, FirstName, InitialMiddleName, LastName, Gender, Email, DateOfBirth, DateOfJoining, Salary) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             preparedStatement.setInt(1, Integer.parseInt(employee.getEmployeeID()));
             preparedStatement.setString(2, employee.getNamePrefix());
             preparedStatement.setString(3, employee.getFirstName());
@@ -121,8 +120,7 @@ public class CSVEmployeeDAO implements EmployeeDAO{
             convertedDate = dateFormatNeeded.format(date);
             preparedStatement.setString(9, convertedDate);
             preparedStatement.setInt(10, Integer.parseInt(employee.getSalary()));
-            preparedStatement.executeUpdate();
-            preparedStatement.close();
+            preparedStatement.addBatch();
         } catch (SQLException|ParseException e) {
             logger.error(e);
             e.printStackTrace();
