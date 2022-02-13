@@ -1,5 +1,7 @@
 package com.spartaglobal.migrationproject;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -10,7 +12,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class StreamsClass {
-
+    public static Logger logger = LogManager.getLogger("Stream File Reader");
     public List<Employee> recordsGet(){
         try {
             List<Employee> records = Files.lines(Path.of("EmployeeRecordsLarge.csv"))
@@ -24,12 +26,15 @@ public class StreamsClass {
             return records;
         } catch (IOException e) {
             e.printStackTrace();
+            logger.warn("IOException Thrown");
             return null;
         }
     }
 
     public ArrayList<Employee> dataGet() {
+        logger.info("Starting stream reader");
         List<Employee> records = recordsGet();
+        logger.info("Removing duplicates");
         List<Employee> employeesList = records.stream()
                 .distinct().toList();
         ArrayList<Employee> employeesArrayList = new ArrayList<>(employeesList);
@@ -37,6 +42,7 @@ public class StreamsClass {
     }
 
     public ArrayList<Employee> getDuplicates(){
+        logger.info("Finding duplicates");
         List<Employee> records = recordsGet();
         List<Employee> duplicates = records.stream()
                 .collect(Collectors.groupingBy(Function.identity()
