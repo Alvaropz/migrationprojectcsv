@@ -18,10 +18,6 @@ Duplicates Handler class, these took the shape of ensuring that the Data was the
 #### Performance testing/effect of multithreading/optimal thread number
 #### Testing file reader / SQL data transfer / multithreading / functional programming
 
-#####File Reader
-To test the File Reader it was checked that the data retrieved from a CSV file matched the data in the file. It was 
-also tested on its ability to both retrieve only duplicates and filter duplicates out of the data provided
-
 #####Multithreading 
 The Multithreading was tested to ensure that the correct number of threads were created by the
 MultiThreading Manager class
