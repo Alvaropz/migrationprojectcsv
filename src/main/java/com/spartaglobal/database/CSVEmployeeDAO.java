@@ -1,5 +1,6 @@
 package com.spartaglobal.database;
 
+import com.spartaglobal.migrationproject.Employee;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -67,29 +68,29 @@ public class CSVEmployeeDAO implements EmployeeDAO{
 
 
     @Override
-    public void insertEmployee(ArrayList<String[]> data) {
+    public void insertEmployee(ArrayList<Employee> data) {
         logger.info("Insert an employee data in the Employees table");
         DateFormat userDateFormat = new SimpleDateFormat("MM/dd/yyyy");
         DateFormat dateFormatNeeded = new SimpleDateFormat("yyyy-MM-dd");
         Date date;
         String convertedDate;
         try {
-            for (String[] employeeArray : data) {
+            for (Employee employee : data) {
                 preparedStatement = connection.prepareStatement("INSERT INTO employees (EmployeeID, NamePrefix, FirstName, InitialMiddleName, LastName, Gender, Email, DateOfBirth, DateOfJoining, Salary) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-                preparedStatement.setInt(1, Integer.parseInt(employeeArray[0]));
-                preparedStatement.setString(2, employeeArray[1]);
-                preparedStatement.setString(3, employeeArray[2]);
-                preparedStatement.setString(4, employeeArray[3]);
-                preparedStatement.setString(5, employeeArray[4]);
-                preparedStatement.setString(6, employeeArray[5]);
-                preparedStatement.setString(7, employeeArray[6]);
-                date = userDateFormat.parse(employeeArray[7]);
+                preparedStatement.setInt(1, Integer.parseInt(employee.getEmployeeID()));
+                preparedStatement.setString(2, employee.getNamePrefix());
+                preparedStatement.setString(3, employee.getFirstName());
+                preparedStatement.setString(4, employee.getMiddleInitial());
+                preparedStatement.setString(5, employee.getLastName());
+                preparedStatement.setString(6, employee.getGender());
+                preparedStatement.setString(7, employee.getEmail());
+                date = userDateFormat.parse(employee.getDateOfBirth());
                 convertedDate = dateFormatNeeded.format(date);
                 preparedStatement.setString(8, convertedDate);
-                date = userDateFormat.parse(employeeArray[8]);
+                date = userDateFormat.parse(employee.getDateOfJoin());
                 convertedDate = dateFormatNeeded.format(date);
                 preparedStatement.setString(9, convertedDate);
-                preparedStatement.setInt(10, Integer.parseInt(employeeArray[9]));
+                preparedStatement.setInt(10, Integer.parseInt(employee.getSalary()));
                 preparedStatement.executeUpdate();
             }
             preparedStatement.close();
@@ -98,7 +99,7 @@ public class CSVEmployeeDAO implements EmployeeDAO{
         }
     }
 
-    public void insertIndivual(String[] employeeInfo)
+    public void insertIndivual(Employee employee)
     {
         DateFormat userDateFormat = new SimpleDateFormat("MM/dd/yyyy");
         DateFormat dateFormatNeeded = new SimpleDateFormat("yyyy-mm-dd");
@@ -106,20 +107,20 @@ public class CSVEmployeeDAO implements EmployeeDAO{
         String convertedDate;
         try {
             preparedStatement = connection.prepareStatement("INSERT INTO employees (EmployeeID, NamePrefix, FirstName, InitialMiddleName, LastName, Gender, Email, DateOfBirth, DateOfJoining, Salary) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-            preparedStatement.setInt(1, Integer.parseInt(employeeInfo[0]));
-            preparedStatement.setString(2, employeeInfo[1]);
-            preparedStatement.setString(3, employeeInfo[2]);
-            preparedStatement.setString(4, employeeInfo[3]);
-            preparedStatement.setString(5, employeeInfo[4]);
-            preparedStatement.setString(6, employeeInfo[5]);
-            preparedStatement.setString(7, employeeInfo[6]);
-            date = userDateFormat.parse(employeeInfo[7]);
+            preparedStatement.setInt(1, Integer.parseInt(employee.getEmployeeID()));
+            preparedStatement.setString(2, employee.getNamePrefix());
+            preparedStatement.setString(3, employee.getFirstName());
+            preparedStatement.setString(4, employee.getMiddleInitial());
+            preparedStatement.setString(5, employee.getLastName());
+            preparedStatement.setString(6, employee.getGender());
+            preparedStatement.setString(7, employee.getEmail());
+            date = userDateFormat.parse(employee.getDateOfBirth());
             convertedDate = dateFormatNeeded.format(date);
             preparedStatement.setString(8, convertedDate);
-            date = userDateFormat.parse(employeeInfo[7]);
+            date = userDateFormat.parse(employee.getDateOfJoin());
             convertedDate = dateFormatNeeded.format(date);
             preparedStatement.setString(9, convertedDate);
-            preparedStatement.setInt(10, Integer.parseInt(employeeInfo[9]));
+            preparedStatement.setInt(10, Integer.parseInt(employee.getSalary()));
             preparedStatement.executeUpdate();
             preparedStatement.close();
         } catch (SQLException|ParseException e) {

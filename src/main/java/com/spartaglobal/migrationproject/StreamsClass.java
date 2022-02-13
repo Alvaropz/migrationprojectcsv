@@ -10,7 +10,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class StreamsClass {
-    public ArrayList<Employee> data() {
+    public ArrayList<Employee> dataGet() {
         try {
             List<Employee> records = Files.lines(Path.of("EmployeeRecordsLarge.csv"))
                     .skip(1)

@@ -19,16 +19,23 @@ public class MultiThreadingManager {
     public static Logger logger = LogManager.getLogger("ThreadingManager");
 
     public static void main(String[] args) {
+        Long startTime = System.nanoTime();
         DAOFactory factoryType = DAOFactory.getDAOFactory();
         EmployeeDAO employeedao = factoryType.getEmployeeDAO();
         employeedao.createEmployeesTable();
-        ArrayList<String[]> data = new ArrayList<>();
-        data = ReadFromCSV.read("EmployeeRecords.csv");
-        data = DuplicatesHandler.filterDuplicates(data, DuplicatesHandler.arrayDuplicates(data));
+//        ArrayList<String[]> data = new ArrayList<>();
+//        data = ReadFromCSV.read("EmployeeRecords.csv");
+//        data = DuplicatesHandler.filterDuplicates(data, DuplicatesHandler.arrayDuplicates(data));
+
+        StreamsClass lambaRead = new StreamsClass();
+        ArrayList<Employee> data = lambaRead.dataGet();
+        System.out.println("Reading Complete");
+
 
         ArrayList<MyThread> threads = loadThreads(10, data);
         runThreads(threads);
-
+        Long endTime = System.nanoTime();
+        System.out.println("Time for everything " +(endTime - startTime));
     }
 
     public static void runThreads(ArrayList<MyThread> threads)
@@ -41,7 +48,7 @@ public class MultiThreadingManager {
             allThreads.add(newThread);
             newThread.start();
         }
-        Long endTime = System.nanoTime() - Starttime;
+
         for (Thread t: allThreads) {
             try {
                 t.join();
@@ -49,11 +56,12 @@ public class MultiThreadingManager {
                 e.printStackTrace();
             }
         }
+        Long endTime = System.nanoTime() - Starttime;
         logger.info("System was ran for " + allThreads.stream().count() + " which took a total of: " + endTime + " nanoseconds");
         System.out.println("Finishing " + endTime);
     }
     //takes in the amount of threads to use, and then runs them
-    public static ArrayList<MyThread> loadThreads(int amountOfThreads, ArrayList<String[]> data)
+    public static ArrayList<MyThread> loadThreads(int amountOfThreads, ArrayList<Employee> data)
     {
         ArrayList<MyThread> allThreads = new ArrayList<>();
 

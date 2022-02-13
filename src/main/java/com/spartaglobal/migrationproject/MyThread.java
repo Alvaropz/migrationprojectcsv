@@ -11,9 +11,9 @@ public class MyThread extends Thread {
     int startPos;
     int endPos;
     CSVEmployeeDAO CSV;
-    ArrayList<String[]> data;
+    ArrayList<Employee> data;
 
-    public MyThread(CSVEmployeeDAO CSV, int startPos, int endPos, ArrayList<String[]> data) {
+    public MyThread(CSVEmployeeDAO CSV, int startPos, int endPos, ArrayList<Employee> data) {
         this.inFile = inFile;
         this.startPos = startPos;
         this.endPos = endPos;
