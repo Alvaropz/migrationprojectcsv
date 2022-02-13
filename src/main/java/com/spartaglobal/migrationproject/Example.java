@@ -24,7 +24,7 @@ public class Example {
 //        StreamsClass lambaRead = new StreamsClass();
 //        ArrayList<Employee> data = lambaRead.dataGet();
 
-
+        
         ArrayList<String[]> data = ReadFromCSV.read("EmployeeRecordsLarge.csv");
         List<String> duplicates = DuplicatesHandler.arrayDuplicates(data);
         view.displayDuplicates(duplicates, 57);

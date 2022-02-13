@@ -2,41 +2,31 @@ package com.spartaglobal.migrationproject;
 import java.util.Objects;
 
 public class Employee {
-
     private String employeeID;
-
     private String namePrefix;
     private String firstName;
     private String middleInitial;
     private String lastName;
-
     private String gender;
     private String email;
     private String dateOfBirth;
     private String dateOfJoin;
-
     private String salary;
 
     public Employee(String employeeID, String namePrefix, String firstName,
                     String middleInitial, String lastName, String gender,
-                    String email, String dateOfBirth, String dateOfJoin,
-                    String salary
-    ) {
+                    String email, String dateOfBirth, String dateOfJoin, String salary) {
 
         this.employeeID = employeeID;
-
         this.namePrefix = namePrefix;
         this.firstName = firstName;
         this.middleInitial = middleInitial;
         this.lastName = lastName;
-
         this.dateOfBirth = dateOfBirth;
         this.dateOfJoin = dateOfJoin;
-
         this.gender = gender;
         this.email = email;
         this.salary = salary;
-
     }
 
     public String getEmployeeID() {
@@ -117,17 +107,6 @@ public class Employee {
 
     public void setSalary(String salary) {
         this.salary = salary;
-    }
-
-    public boolean isRecordValid() {
-
-        if (employeeID == null || namePrefix == null || firstName == null ||
-                middleInitial == null || lastName == null || gender == null ||
-                email == null || dateOfBirth == null || dateOfJoin == null ||
-                salary == null) {
-            return false;
-        }
-        return true;
     }
 
     @Override
