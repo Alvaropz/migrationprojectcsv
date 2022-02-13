@@ -3,6 +3,7 @@ package com.spartaglobal.migrationproject;
 import com.spartaglobal.database.CSVEmployeeDAO;
 import com.spartaglobal.database.DAOFactory;
 import com.spartaglobal.database.EmployeeDAO;
+import com.spartaglobal.view.DisplayManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -10,6 +11,7 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.ParseException;
 import java.util.ArrayList;
 
 import static com.mysql.cj.conf.PropertyKey.logger;
@@ -32,10 +34,18 @@ public class MultiThreadingManager {
         System.out.println("Reading Complete");
 
 
-        ArrayList<MyThread> threads = loadThreads(20, data);
+        ArrayList<MyThread> threads = loadThreads(10, data);
         runThreads(threads);
         Long endTime = System.nanoTime();
         System.out.println("Time for everything " +(endTime - startTime));
+
+        ArrayList<String[]> emp = employeedao.selectAllEmployees();
+        DisplayManager dm = new DisplayManager();
+        try {
+            dm.displayResults(emp);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void runThreads(ArrayList<MyThread> threads)
@@ -71,9 +81,10 @@ public class MultiThreadingManager {
         int Fullstacksize = (int) data.stream().count();
         int arrayStackSize = Fullstacksize/amountOfThreads;
         int stackCounter = 0;
+        CSVEmployeeDAO CSV = new CSVEmployeeDAO();
+
         for(int i = 0; i < amountOfThreads; i++)
         {
-            CSVEmployeeDAO CSV = new CSVEmployeeDAO();
             MyThread newThread;
 
             if(i+1 == amountOfThreads)
