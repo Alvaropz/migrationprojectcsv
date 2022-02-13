@@ -1,0 +1,530 @@
+FILE [INFO ] 17:50 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 17:50 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 17:50 CSVEmployeeDAO Logger - Database connection created
+FILE [ERROR] 17:50 CSVEmployeeDAO Logger - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+FILE [INFO ] 17:50 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 17:51 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:51 ThreadingManager - System was ran for 10 which took a total of: 13669186500 nanoseconds
+FILE [INFO ] 17:51 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 17:51 Viewer Logger - Display Results
+FILE [INFO ] 17:52 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:52 ThreadingManager - System was ran for 10 which took a total of: 13375285200 nanoseconds
+FILE [INFO ] 17:52 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:53 ThreadingManager - System was ran for 1 which took a total of: 13997890500 nanoseconds
+FILE [INFO ] 17:53 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:53 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 17:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 17:54 ThreadingManager - System was ran for 10 which took a total of: 12595910800 nanoseconds
+FILE [INFO ] 19:42 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:42 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:42 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:42 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:42 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:42 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 19:42 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:42 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:42 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:42 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:42 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:42 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 19:43 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:43 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:43 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:43 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:43 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:43 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 19:43 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:43 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:43 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:43 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:43 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:43 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 19:44 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:44 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:44 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:44 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:44 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:44 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 19:44 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:44 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:44 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:44 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:44 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:44 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 19:46 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:46 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:46 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:46 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:46 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:46 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 19:46 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:46 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:46 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:46 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:46 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:46 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 19:47 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:47 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:47 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:47 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:47 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:47 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:47 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:47 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:47 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:47 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:47 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 19:48 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:48 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:48 ThreadingManager - System was ran for 10 which took a total of: 20312124400 nanoseconds
+FILE [INFO ] 19:49 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:49 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:49 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:49 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 19:51 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:51 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:51 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:51 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:51 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:51 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:51 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:51 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:51 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:51 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:51 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 19:52 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 ThreadingManager - System was ran for 10 which took a total of: 16864699300 nanoseconds
+FILE [INFO ] 19:52 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Connection between the program and MySQL initialised
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:52 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:52 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:53 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:53 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 19:53 ThreadingManager - System was ran for 10 which took a total of: 19660837800 nanoseconds
+FILE [INFO ] 19:53 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:53 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:53 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:53 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:53 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 19:53 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:53 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:53 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:53 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:53 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:53 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 19:54 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:54 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:54 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:54 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:54 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:54 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 19:54 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:54 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:54 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:54 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:54 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:54 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 19:55 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:55 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:55 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:55 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:55 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:55 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 19:55 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:55 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:55 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:55 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:55 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:55 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 19:57 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 19:57 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 19:57 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 19:57 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 19:57 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 19:57 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 19:57 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 20:00 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 20:00 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 20:00 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 20:00 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 20:00 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 20:00 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 20:00 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 20:00 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 20:00 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 20:00 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 20:00 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 20:00 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 20:00 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 20:00 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 20:00 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 20:00 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 20:00 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 20:00 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 20:00 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 20:00 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 20:00 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 20:00 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 20:00 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 20:00 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 20:01 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 20:01 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 20:01 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 20:01 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 20:01 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 20:01 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 20:01 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 20:01 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 20:01 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 20:01 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 20:01 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 20:01 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 20:02 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 20:02 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 20:02 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 20:02 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 20:02 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 20:02 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 20:02 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 20:02 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 20:02 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 20:02 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 20:02 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 20:02 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 20:07 Stream/Buffered readers comparison - Reading methods comparison initialized
+FILE [INFO ] 20:07 Stream/Buffered readers comparison - Starting stream reader
+FILE [INFO ] 20:07 Stream/Buffered readers comparison - Stream reader completed in: 228319200 nanoseconds
+FILE [INFO ] 20:07 Stream/Buffered readers comparison - Starting buffered reader
+FILE [INFO ] 20:09 Stream/Buffered readers comparison - Buffered reader completed in: 160930730000 nanoseconds
+FILE [INFO ] 20:30 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 20:30 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 20:30 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 20:30 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 20:30 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 20:31 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 20:31 Viewer Logger - dataOneEmployee - Data from an employee can be retrieved
+FILE [INFO ] 20:31 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 20:34 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 20:34 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 20:34 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 20:34 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 20:34 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 20:35 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 20:35 Viewer Logger - dataOneEmployee - Data from an employee can be retrieved
+FILE [INFO ] 20:35 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 20:36 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 20:36 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 20:36 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 20:36 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 20:36 CSVEmployeeDAO Logger - Insert an employee data in the Employees table
+FILE [INFO ] 20:37 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 20:37 Viewer Logger - dataOneEmployee - Data from an employee can be retrieved
+FILE [INFO ] 20:37 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 22:14 Controller - Migration Manager - Program starts
+FILE [INFO ] 22:14 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 22:14 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 22:14 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 22:14 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 22:14 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 22:14 Controller - Migration Manager - Program starts
+FILE [INFO ] 22:14 Controller - Migration Manager - Program starts
+FILE [INFO ] 22:14 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 22:14 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 22:14 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 22:14 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 22:14 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 22:14 Controller - Migration Manager - Program starts

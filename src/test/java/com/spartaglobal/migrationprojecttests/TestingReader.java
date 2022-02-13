@@ -13,7 +13,7 @@ import java.util.Arrays;
 public class TestingReader {
 
     @Test
-    @DisplayName("given a line of data, make sure it is record properly.")
+    @DisplayName("Given a line of data, make sure it is record properly.")
     void checkDataisReadCorrectly()
     {
         ReadFromCSV frc = new ReadFromCSV();
@@ -24,7 +24,7 @@ public class TestingReader {
     }
 
     @Test
-    @DisplayName("given lines of data, make sure Duplicates are picked up.")
+    @DisplayName("Given multiple lines of data, make sure Duplicates are picked up.")
     void checkDuplicatesarereturned()
     {
         ReadFromCSV frc = new ReadFromCSV();

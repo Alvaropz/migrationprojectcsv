@@ -1,6 +1,0 @@
-Logger ideas:
-- Start of program
-- Data being read and passed into an array list
-- If duplicates are found & how many
-- Data being passed into MySQL
-- End of program

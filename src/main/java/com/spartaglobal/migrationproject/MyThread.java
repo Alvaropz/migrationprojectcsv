@@ -45,7 +45,7 @@ public class MyThread extends Thread {
             e.printStackTrace();
         }
 
-        System.out.println(i);
+//        System.out.println(i);
     }
 
 }
