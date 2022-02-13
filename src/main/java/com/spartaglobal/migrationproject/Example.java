@@ -30,6 +30,10 @@ public class Example {
 //        view.displayDuplicates(duplicates);
 //        data = DuplicatesHandler.filterDuplicates(data, duplicates);
 //        System.out.println(data);
+        StreamsClass d = new StreamsClass();
+        ArrayList<Employee> duplicates = d.getDuplicates();
+       view.displayDuplicates(duplicates);
+
 
         Long Starttime = System.nanoTime();
         ArrayList<MyThread> threads = MultiThreadingManager.loadThreads(numberOfThreads, data);
