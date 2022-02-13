@@ -13,7 +13,7 @@ public class StreamsClass {
 
     public List<Employee> recordsGet(){
         try {
-            List<Employee> records = Files.lines(Path.of("EmployeeRecords.csv"))
+            List<Employee> records = Files.lines(Path.of("EmployeeRecordsLarge.csv"))
                     .skip(1)
                     .map(s -> {
                         String[] values = s.split(",");
