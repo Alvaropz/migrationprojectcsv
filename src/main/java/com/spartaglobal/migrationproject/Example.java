@@ -21,21 +21,27 @@ public class Example {
 
         employeedao.createEmployeesTable();
 
-//        StreamsClass lambaRead = new StreamsClass();
-//        ArrayList<Employee> data = lambaRead.dataGet();
+        StreamsClass lambaRead = new StreamsClass();
+        ArrayList<Employee> data = lambaRead.dataGet();
 
 
-        ArrayList<String[]> data = ReadFromCSV.read("EmployeeRecordsLarge.csv");
-        List<String> duplicates = DuplicatesHandler.arrayDuplicates(data);
-        view.displayDuplicates(duplicates, 57);
-        data = DuplicatesHandler.filterDuplicates(data, duplicates);
-        System.out.println(data);
+//        ArrayList<String[]> data = ReadFromCSV.read("EmployeeRecordsLarge.csv");
+//        List<String> duplicates = DuplicatesHandler.arrayDuplicates(data);
+//        view.displayDuplicates(duplicates);
+//        data = DuplicatesHandler.filterDuplicates(data, duplicates);
+//        System.out.println(data);
+        StreamsClass d = new StreamsClass();
+        ArrayList<Employee> duplicates = d.getDuplicates();
+        view.displayDuplicates(duplicates);
 
-//        Long Starttime = System.nanoTime();
-//        ArrayList<MyThread> threads = MultiThreadingManager.loadThreads(numberOfThreads, data);
-//        MultiThreadingManager.runThreads(threads);
-//        Long endTime = System.nanoTime() - Starttime;
-//        System.out.println(endTime);
+
+
+
+        Long Starttime = System.nanoTime();
+        ArrayList<MyThread> threads = MultiThreadingManager.loadThreads(numberOfThreads, data);
+        MultiThreadingManager.runThreads(threads);
+        Long endTime = System.nanoTime() - Starttime;
+        System.out.println(endTime);
 
         ArrayList<String[]> retrievedData = employeedao.selectAllEmployees();
         view.dataOneEmployee();

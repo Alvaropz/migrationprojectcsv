@@ -33,7 +33,7 @@ public class MigrationManager {
 //
 //        view.dataOneEmployee();
 //        view.displayResultsChoice(retrievedData);
-        logger.info("Program starts");
+        logger.info("Program ends");
     }
 }
 

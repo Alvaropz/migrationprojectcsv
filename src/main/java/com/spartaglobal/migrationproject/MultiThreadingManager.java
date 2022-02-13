@@ -19,7 +19,6 @@ import static com.mysql.cj.conf.PropertyKey.logger;
 public class MultiThreadingManager {
 
     public static Logger logger = LogManager.getLogger("ThreadingManager");
-
     public static void runThreads(ArrayList<MyThread> threads)
     {
         ArrayList<Thread> allThreads = new ArrayList<>();
