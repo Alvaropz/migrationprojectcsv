@@ -1,6 +1,7 @@
 package com.spartaglobal.view;
 
 import com.spartaglobal.database.CSVEmployeeDAO;
+import com.spartaglobal.migrationproject.Employee;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -32,25 +33,22 @@ public class DisplayManager {
         return number;
     }
 
-    public void displayDuplicates(List<String> duplicates, int totalDuplicates) {
+    public void displayDuplicates(List<Employee> duplicates) {
         logger.info("displayDuplicates - Gives the option of printing an Array of Duplicates");
-        if (totalDuplicates == 0) {
-            System.out.println("There are no duplicates in the file used.");
-        } else if (totalDuplicates > 0) {
-            if (totalDuplicates == 1) {
-                System.out.println("There is only one duplicate in the file used.");
-            } else {
-                System.out.println("There are a total of " + totalDuplicates + "in the file used");
+        Scanner scanner = new Scanner(System.in);
+        String input = "";
+        while (!input.equals("y") && !input.equals("n")) {
+            System.out.print("Do you want to print the duplicates? Please type Y for \"yes\", N for \"no\": ");
+            input = scanner.next().toLowerCase();
+        }
+        if (input.equals("y")){
+            if(duplicates.isEmpty()){
+                System.out.println("There are no duplicates to show");
+            } else{
+                System.out.println(duplicates);
+                System.out.println("There are: " + duplicates.size() + " duplicates");
             }
-            Scanner scanner = new Scanner(System.in);
-            String input = "";
-            while (!input.equals("y") && !input.equals("n")) {
-                System.out.print("Do you want to print the duplicates? Please type Y for \"yes\", N for \"no\": ");
-                input = scanner.next().toLowerCase();
-            }
-            if (input.equals("y")){
-                System.out.println(duplicates.toString());
-            }
+
         }
     }
 

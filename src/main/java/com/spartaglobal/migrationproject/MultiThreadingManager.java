@@ -31,6 +31,7 @@ public class MultiThreadingManager {
 
         StreamsClass lambaRead = new StreamsClass();
         ArrayList<Employee> data = lambaRead.dataGet();
+        ArrayList<Employee> duplicates = lambaRead.getDuplicates();
         System.out.println("Reading Complete");
 
 
@@ -41,11 +42,15 @@ public class MultiThreadingManager {
 
         ArrayList<String[]> emp = employeedao.selectAllEmployees();
         DisplayManager dm = new DisplayManager();
-        try {
-            dm.displayResults(emp);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            dm.displayResults(emp);
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//        }
+
+//        System.out.println(duplicates);
+//        System.out.println(duplicates.size());
+
     }
 
     public static void runThreads(ArrayList<MyThread> threads)
