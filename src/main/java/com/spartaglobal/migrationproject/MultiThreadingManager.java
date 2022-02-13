@@ -34,18 +34,11 @@ public class MultiThreadingManager {
         System.out.println("Reading Complete");
 
 
-        ArrayList<MyThread> threads = loadThreads(10, data);
+        ArrayList<MyThread> threads = loadThreads(6, data);
         runThreads(threads);
         Long endTime = System.nanoTime();
         System.out.println("Time for everything " +(endTime - startTime));
 
-        ArrayList<String[]> emp = employeedao.selectAllEmployees();
-        DisplayManager dm = new DisplayManager();
-        try {
-            dm.displayResults(emp);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
     }
 
     public static void runThreads(ArrayList<MyThread> threads)
@@ -68,7 +61,6 @@ public class MultiThreadingManager {
         }
         Long endTime = System.nanoTime() - Starttime;
         logger.info("System was ran for " + allThreads.stream().count() + " which took a total of: " + endTime + " nanoseconds");
-        System.out.println("Finishing " + endTime);
     }
     //takes in the amount of threads to use, and then runs them
     public static ArrayList<MyThread> loadThreads(int amountOfThreads, ArrayList<Employee> data)
@@ -90,13 +82,11 @@ public class MultiThreadingManager {
             if(i+1 == amountOfThreads)
             {
                 newThread = new MyThread(CSV, stackCounter, (int) data.stream().count(), data);
-                System.out.println(stackCounter + " " + data.stream().count());
 
             }
             else
             {
                 int endPos = stackCounter+arrayStackSize;
-                System.out.println(stackCounter + " " + endPos);
 
                 newThread = new MyThread(CSV, stackCounter, endPos, data);
                 stackCounter += arrayStackSize;

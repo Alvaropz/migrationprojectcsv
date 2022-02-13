@@ -44,8 +44,6 @@ public class MyThread extends Thread {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-        System.out.println(i);
     }
 
 }
