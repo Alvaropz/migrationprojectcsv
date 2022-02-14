@@ -1,1 +1,65 @@
-FILE [INFO ] 15:21 Sort Manager Logger - This is a test log to a file
+FILE [INFO ] 07:05 Controller - Migration Manager - Program starts
+FILE [INFO ] 07:05 DAOFactory Logger - CSVDAOFactory class returned
+FILE [INFO ] 07:05 CSVEmployeeDAO Logger - CSVEmployeeDAO class returned
+FILE [INFO ] 07:05 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:05 CSVEmployeeDAO Logger - Employees table created in the database
+FILE [INFO ] 07:05 CSVEmployeeDAO Logger - Connection between the program and MySQL closed
+FILE [INFO ] 07:05 Stream File Reader - Finding duplicates
+FILE [INFO ] 07:05 Viewer Logger - displayDuplicates - Gives the option of printing an Array of Duplicates
+FILE [INFO ] 07:05 Viewer Logger - numberOfThreads - User input
+FILE [INFO ] 07:07 Stream File Reader - Starting stream reader
+FILE [INFO ] 07:07 Stream File Reader - Removing duplicates
+FILE [INFO ] 07:07 ThreadingManager - LoadThreads method called
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 ThreadingManager - System was ran for 20 which took a total of: 3998165900 nanoseconds
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Retrieved all records from the Employees Table
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Connection between the program and MySQL closed
+FILE [INFO ] 07:07 Viewer Logger - dataOneEmployee - Data from an employee can be retrieved
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Database connection created
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Retrieved the information related to one employee from the Employees Table
+FILE [INFO ] 07:07 CSVEmployeeDAO Logger - Connection between the program and MySQL closed
+FILE [INFO ] 07:08 CSVEmployeeDAO Logger - Retrieved the information related to one employee from the Employees Table
+FILE [INFO ] 07:08 CSVEmployeeDAO Logger - Connection between the program and MySQL closed
+FILE [INFO ] 07:08 Viewer Logger - Display Results
+FILE [INFO ] 07:08 Viewer Logger - displayResultsChoice - Allows the user to choose if display the results
+FILE [INFO ] 07:09 Viewer Logger - Display Results
+FILE [INFO ] 07:09 Controller - Migration Manager - Program ends
