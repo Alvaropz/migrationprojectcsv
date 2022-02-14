@@ -15,7 +15,7 @@ public class StreamsClass {
     public static Logger logger = LogManager.getLogger("Stream File Reader");
     public List<Employee> recordsGet(){
         try {
-            List<Employee> records = Files.lines(Path.of("EmployeeRecordsLarge.csv"))
+            List<Employee> records = Files.lines(Path.of("EmployeeRecords.csv"))
                     .skip(1)
                     .map(s -> {
                         String[] values = s.split(",");

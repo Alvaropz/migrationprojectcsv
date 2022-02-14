@@ -14,6 +14,7 @@ public class MigrationManager {
 
     public void run() {
         logger.info("Program starts");
+        System.out.println("Reading the file, please wait...");
         DisplayManager view = new DisplayManager();
         DAOFactory factoryType = DAOFactory.getDAOFactory();
         EmployeeDAO employeedao = factoryType.getEmployeeDAO();

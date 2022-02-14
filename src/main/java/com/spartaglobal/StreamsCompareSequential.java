@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 
-public class StreamsCompareMain {
+public class StreamsCompareSequential {
     public static Logger logger = LogManager.getLogger("Stream/Buffered readers comparison");
     public static void main(String[] args) {
         logger.info("Reading methods comparison initialized");
