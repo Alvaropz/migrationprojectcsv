@@ -1,12 +1,19 @@
 package com.spartaglobal.migrationproject;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 public abstract class DuplicatesHandler {
 
+    private static Logger logger = LogManager.getLogger("Duplicates Handler Class");
+
+    // This method is only used in the Testing Reader file to check corrupted data.
     public static int duplicateCheck(ArrayList<String[]> data){
+        logger.info("Duplicate Check method called");
         int duplicates = 0;
         List<String> dupids = new ArrayList<>();
         List<String> safe = new ArrayList<>();
@@ -34,10 +41,9 @@ public abstract class DuplicatesHandler {
         return duplicates;
     }
 
-        public static List<String> arrayDuplicates(ArrayList<String[]> data){
-        data.remove(0);
+    public static List<String> arrayDuplicates(ArrayList<String[]> data){
+        logger.info("Retrieved an array of Strings with all duplicates in the list");
         List<String> dupids = new ArrayList<>();
-        int dups = 0;
         for(String[] i : data) {
             String id = i[0];
             int f = 0;
@@ -48,7 +54,6 @@ public abstract class DuplicatesHandler {
                 if (x[0].equals(id)) {
                     f++;
                     if (f > 1 && dupids.contains(id) == false) {
-                        dups++;
                         dupids.add(id);
                     }
                 }
@@ -58,6 +63,7 @@ public abstract class DuplicatesHandler {
     }
 
     public static ArrayList<String[]> filterDuplicates(ArrayList<String[]> data, List<String> duplicates) {
+        logger.info("List retrieved after filtering the duplicate data");
         for (Iterator<String[]> iterator = data.iterator(); iterator.hasNext();) {
             String[] row = iterator.next();
             if(duplicates.contains(row[0])) {

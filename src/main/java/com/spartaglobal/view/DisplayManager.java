@@ -45,14 +45,16 @@ public class DisplayManager {
             if(duplicates.isEmpty()){
                 System.out.println("There are no duplicates to show");
             } else{
-                System.out.println(duplicates);
+                for (Employee employee : duplicates) {
+                    System.out.println(employee);
+                }
                 System.out.println("There are: " + duplicates.size() + " duplicates");
             }
 
         }
     }
 
-    public void displayResultsChoice(ArrayList<String[]> data) {
+    public void displayResultsChoice(List<Employee> data) {
         logger.info("displayResultsChoice - Allows the user to choose if display the results");
         Scanner scanner = new Scanner(System.in);
         String input = "";
@@ -75,7 +77,7 @@ public class DisplayManager {
         Scanner scanner = new Scanner(System.in);
         String input = "";
 
-        ArrayList<String[]> retrievedData = new ArrayList<>();
+        ArrayList<Employee> retrievedData = new ArrayList<>();
         CSVEmployeeDAO connection = new CSVEmployeeDAO();
 
         while (retrievedData.size() == 0 && !input.equals("exit")) {
@@ -90,6 +92,7 @@ public class DisplayManager {
         }
         if (retrievedData.size() > 0) {
             try {
+
                 DisplayManager.displayResults(retrievedData);
             } catch (ParseException e) {
                 logger.error(e.getMessage());
@@ -98,7 +101,7 @@ public class DisplayManager {
         }
     }
 
-    public static void displayResults(ArrayList<String[]> data) throws ParseException {
+    public static void displayResults(List<Employee> data) throws ParseException {
         logger.info("Display Results");
         SimpleDateFormat sdfSource = new SimpleDateFormat("yyyy-MM-dd");
         SimpleDateFormat sdfDestination = new SimpleDateFormat("dd/MM/yyyy");
@@ -107,12 +110,12 @@ public class DisplayManager {
         String dob;
         String doj;
         System.out.printf("%-15s%-20s%-20s%-20s%-20s%-10s%-40s%-20s%-20s%-20s\n", "Employee ID", "Courtesy Title", "First Name", "MN Initial", "Last Name", "Gender", "Email", "Date Of Birth", "Date of Joining", "Salary");
-        for (String[] employeeRow : data) {
-            dobDate = sdfSource.parse(employeeRow[7]);
-            dojDate = sdfSource.parse(employeeRow[8]);
+        for (Employee employee : data) {
+            dobDate = sdfSource.parse(employee.getDateOfBirth());
+            dojDate = sdfSource.parse(employee.getDateOfJoin());
             dob = sdfDestination.format(dobDate);
             doj = sdfDestination.format(dojDate);
-            System.out.format("%-15s%-20s%-20s%-20s%-20s%-10s%-40s%-20s%-20s%-20s\n", employeeRow[0], employeeRow[1], employeeRow[2], employeeRow[3], employeeRow[4], employeeRow[5], employeeRow[6], dob, doj, employeeRow[9]);
+            System.out.format("%-15s%-20s%-20s%-20s%-20s%-10s%-40s%-20s%-20s%-20s\n", employee.getEmployeeID(), employee.getNamePrefix(), employee.getFirstName(), employee.getMiddleInitial(), employee.getLastName(), employee.getGender(), employee.getEmail(), dob, doj, employee.getSalary());
         }
     }
 }

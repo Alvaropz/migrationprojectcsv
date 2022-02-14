@@ -7,6 +7,6 @@ import java.util.ArrayList;
 public interface EmployeeDAO {
     void createEmployeesTable();
     void insertEmployee(ArrayList<Employee> data);
-    ArrayList<String[]> selectAllEmployees();
-    ArrayList<String[]> selectOneEmployee(String employeeID);
+    ArrayList<Employee>selectAllEmployees();
+    ArrayList<Employee> selectOneEmployee(String employeeID);
 }

@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class TestingSQLSendReceive {
 
@@ -23,12 +24,11 @@ public class TestingSQLSendReceive {
         EmployeeDAO employeedao = factoryType.getEmployeeDAO();
         employeedao.createEmployeesTable();
         employeedao.insertEmployee(emArr);
-        ArrayList<String[]> actualArrList = employeedao.selectAllEmployees();
+        ArrayList<Employee> actualArrList = employeedao.selectAllEmployees();
 
         // Putting expected data into SQL format
-        ArrayList<String[]> expectedArrList = new ArrayList<>();
-        String[]  row1e = {"1111111","Mr.","Bob","F","Smith","M","bob.smith@hotmail.com","2000-01-01","2000-01-01","1111111.00"};
-        expectedArrList.add(row1e);
+        ArrayList<Employee> expectedArrList = new ArrayList<>();
+        expectedArrList.add(new Employee("1111111","Mr.","Bob","F","Smith","M","bob.smith@hotmail.com","2000-01-01","2000-01-01","1111111.00"));
 
         // Comparing arrays
         var actual = actualArrList.toArray();
@@ -54,19 +54,18 @@ public class TestingSQLSendReceive {
         EmployeeDAO employeedao = factoryType.getEmployeeDAO();
         employeedao.createEmployeesTable();
         employeedao.insertEmployee(emArr);
-        ArrayList<String[]> actualArrList = employeedao.selectAllEmployees();
+        ArrayList<Employee> actualArrList = employeedao.selectAllEmployees();
 
         // Putting expected data into SQL format
-        ArrayList<String[]> expectedArrList = new ArrayList<>();
+        ArrayList<Employee> expectedArrList = new ArrayList<>();
 
-        String[] row1e = {"222222", "Mr.", "Jim", "A", "Jones", "M", "jim.jones@hotmail.com", "2000-02-02", "2000-02-02", "2222222.00"};
-        String[] row2e = {"1111111","Mr.","Bob","F","Smith","M","bob.smith@hotmail.com","2000-01-01","2000-01-01","1111111.00"};
-        expectedArrList.add(row1e);
-        expectedArrList.add(row2e);
+
+        expectedArrList.add(new Employee("222222", "Mr.", "Jim", "A", "Jones", "M", "jim.jones@hotmail.com", "2000-02-02", "2000-02-02", "2222222.00"));
+        expectedArrList.add(new Employee("1111111","Mr.","Bob","F","Smith","M","bob.smith@hotmail.com","2000-01-01","2000-01-01","1111111.00"));
 
         // Comparing arrays
-        var actual = actualArrList.toArray();
-        var expected = expectedArrList.toArray();
-        Assertions.assertArrayEquals(expected, actual);
+        var actual = Arrays.asList(actualArrList);
+        var expected = Arrays.asList(expectedArrList);
+        Assertions.assertEquals(expected, actual);
     }
 }

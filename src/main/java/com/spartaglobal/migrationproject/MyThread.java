@@ -8,18 +8,16 @@ import java.util.ArrayList;
 
 public class MyThread extends Thread {
 
-    BufferedReader inFile;
     int startPos;
     int endPos;
     CSVEmployeeDAO CSV;
     ArrayList<Employee> data;
 
-    public MyThread(CSVEmployeeDAO CSV, int startPos, int endPos, ArrayList<Employee> data) {
-        this.inFile = inFile;
+    public MyThread(int startPos, int endPos, ArrayList<Employee> data) {
         this.startPos = startPos;
         this.endPos = endPos;
         this.data = data;
-        this.CSV = CSV;
+
     }
 
     @Override
@@ -44,8 +42,6 @@ public class MyThread extends Thread {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-//        System.out.println(i);
     }
 
 }

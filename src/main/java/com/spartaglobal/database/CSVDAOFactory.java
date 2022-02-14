@@ -37,12 +37,5 @@ public class CSVDAOFactory extends DAOFactory{
         return new CSVEmployeeDAO();
     }
 
-    public static void closeConnection() throws SQLException{
-        logger.info("Database connection close");
-        if(connection != null) {
-            connection.close();
-        }
-    }
-
 
 }

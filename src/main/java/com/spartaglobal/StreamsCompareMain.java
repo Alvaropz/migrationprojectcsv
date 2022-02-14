@@ -2,6 +2,7 @@ package com.spartaglobal;
 import com.spartaglobal.migrationproject.DuplicatesHandler;
 import com.spartaglobal.migrationproject.Employee;
 import com.spartaglobal.migrationproject.ReadFromCSV;
+import com.spartaglobal.migrationproject.StreamsClass;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -10,6 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 
 public class StreamsCompareMain {
@@ -18,6 +20,7 @@ public class StreamsCompareMain {
         logger.info("Reading methods comparison initialized");
         logger.info("Starting stream reader");
         long streamStartTime = System.nanoTime();
+        StreamsClass stream = new StreamsClass();
         try {
             List<Employee> records = Files.lines(Path.of("EmployeeRecordsLarge.csv"))
                     .skip(1)
@@ -38,7 +41,7 @@ public class StreamsCompareMain {
         }
         long streamEndTime = System.nanoTime();
         logger.info("Stream reader completed in: " + (streamEndTime - streamStartTime) + " nanoseconds");
-        System.out.println("The Stream took: " + (streamEndTime - streamStartTime) + " nanoseconds to complete");
+        System.out.println("The Stream took: " + TimeUnit.NANOSECONDS.toMillis((streamEndTime - streamStartTime)) + " milliseconds to complete");
 
         logger.info("Starting buffered reader");
         long bufferedReaderStartTime = System.nanoTime();
@@ -47,7 +50,7 @@ public class StreamsCompareMain {
         data = DuplicatesHandler.filterDuplicates(data, duplicates);
         long bufferedReaderEndTime = System.nanoTime();
         logger.info("Buffered reader completed in: " + (bufferedReaderEndTime - bufferedReaderStartTime) + " nanoseconds");
-        System.out.println("The buffered reader took: " + (bufferedReaderEndTime - bufferedReaderStartTime) + " nanoseconds to complete");
+        System.out.println("The buffered reader took: " + TimeUnit.NANOSECONDS.toSeconds((bufferedReaderEndTime - bufferedReaderStartTime)) + " seconds to complete");
     }
 }
 

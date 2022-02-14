@@ -26,7 +26,6 @@ public class CSVEmployeeDAO implements EmployeeDAO{
     }
 
     public void initialise() {
-        logger.info("Connection between the program and MySQL initialised");
         try {
             connection = CSVDAOFactory.getConnectionDAO();
             preparedStatement = connection.prepareStatement("INSERT INTO employees (EmployeeID, NamePrefix, FirstName, InitialMiddleName, LastName, Gender, Email, DateOfBirth, DateOfJoining, Salary) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
@@ -60,6 +59,7 @@ public class CSVEmployeeDAO implements EmployeeDAO{
                             ");");
             preparedStatement.executeUpdate();
             preparedStatement.close();
+            logger.info("Connection between the program and MySQL closed");
         } catch (SQLException e) {
             logger.error(e);
             e.printStackTrace();
@@ -94,6 +94,7 @@ public class CSVEmployeeDAO implements EmployeeDAO{
                 preparedStatement.executeUpdate();
             }
             preparedStatement.close();
+            logger.info("Connection between the program and MySQL closed");
         } catch (SQLException| ParseException e) {
             e.printStackTrace();
         }
@@ -128,20 +129,23 @@ public class CSVEmployeeDAO implements EmployeeDAO{
     }
 
     @Override
-    public ArrayList<String[]> selectAllEmployees() {
+    public ArrayList<Employee> selectAllEmployees() {
         logger.info("Retrieved all records from the Employees Table");
         Statement statement = null;
         ResultSet rs = null;
-        ArrayList<String[]> retrievedData = new ArrayList<>();
+        ArrayList<Employee> retrievedData = new ArrayList<>();
         try {
 
             statement = connection.createStatement();
             rs = statement.executeQuery("SELECT * FROM employees");
             while (rs.next()) {
-                retrievedData.add(new String[]{rs.getString("EmployeeID"), rs.getString("NamePrefix"), rs.getString("FirstName"), rs.getString("InitialMiddleName"), rs.getString("LastName"), rs.getString("Gender"), rs.getString("Email"), rs.getString("DateOfBirth"), rs.getString("DateOfJoining"), rs.getString("Salary")});
+                retrievedData.add(new Employee(rs.getString("EmployeeID"), rs.getString("NamePrefix"), rs.getString("FirstName"),
+                        rs.getString("InitialMiddleName"), rs.getString("LastName"), rs.getString("Gender"), rs.getString("Email"),
+                        rs.getString("DateOfBirth"), rs.getString("DateOfJoining"), rs.getString("Salary")));
             }
             rs.close();
             statement.close();
+            logger.info("Connection between the program and MySQL closed");
         } catch (SQLException e) {
             logger.error(e);
             e.printStackTrace();
@@ -150,22 +154,25 @@ public class CSVEmployeeDAO implements EmployeeDAO{
     }
 
     @Override
-    public ArrayList<String[]> selectOneEmployee(String EmployeeID) {
+    public ArrayList<Employee> selectOneEmployee(String EmployeeID) {
         logger.info("Retrieved the information related to one employee from the Employees Table");
         PreparedStatement preparedStatement = null;
         ResultSet rs = null;
-        ArrayList<String[]> retrievedData = new ArrayList<>();
+        ArrayList<Employee> retrievedData = new ArrayList<>();
 
         try {
             preparedStatement = connection.prepareStatement("SELECT * FROM employees WHERE EmployeeID=?");
             preparedStatement.setString(1, EmployeeID);
             rs = preparedStatement.executeQuery();
             while (rs.next()) {
-                retrievedData.add(new String[]{rs.getString("EmployeeID"), rs.getString("NamePrefix"), rs.getString("FirstName"), rs.getString("InitialMiddleName"), rs.getString("LastName"), rs.getString("Gender"), rs.getString("Email"), rs.getString("DateOfBirth"), rs.getString("DateOfJoining"), rs.getString("Salary")});
+                retrievedData.add(new Employee(rs.getString("EmployeeID"), rs.getString("NamePrefix"), rs.getString("FirstName"),
+                        rs.getString("InitialMiddleName"), rs.getString("LastName"), rs.getString("Gender"), rs.getString("Email"),
+                        rs.getString("DateOfBirth"), rs.getString("DateOfJoining"), rs.getString("Salary")));
             }
 
             rs.close();
             preparedStatement.close();
+            logger.info("Connection between the program and MySQL closed");
         } catch (SQLException e) {
             logger.error(e);
             e.printStackTrace();

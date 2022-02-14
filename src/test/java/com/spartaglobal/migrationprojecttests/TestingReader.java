@@ -29,7 +29,6 @@ public class TestingReader {
     {
         ReadFromCSV frc = new ReadFromCSV();
         ArrayList<String[]> al =  frc.read("test2");
-        ArrayList<String[]> Actual = new ArrayList<>();
 
         Assertions.assertEquals(1, DuplicatesHandler.duplicateCheck(al));
     }
@@ -40,7 +39,6 @@ public class TestingReader {
     {
         ReadFromCSV frc = new ReadFromCSV();
         ArrayList<String[]> al =  frc.read("test3");
-        ArrayList<String[]> Actual = new ArrayList<>();
 
         Assertions.assertEquals(0, DuplicatesHandler.duplicateCheck(al));
     }

@@ -39,7 +39,7 @@ In this project we were using just one factory, so there is only one connection.
 ````properties
 dburl=jdbc:mysql://localhost:3306/employeesdb
 dbuserid=root
-dbpassword=password1
+dbpassword=[MYSQL_PASSWORD]
 ````
 <span style="font-size: xx-small; "> *Disclaimer: The information is separated in a different file to avoid information leaks. Be aware always of not sharing this information in public spaces such as GitHub.*</span> 
 
@@ -72,6 +72,30 @@ This project goes through 4 phases:
 
 #### Performance testing/effect of multithreading/optimal thread number
 
+Multithreading was set up to speed up the reading of the information into the database. This was done by creating a custom object to be threaded(You can find the object names MyThread).
+This object took in a start and end position and the list of employees. Then the manager than create an array for the all the threads that need creating and running, and activate them, before waiting for each of them to be complete.
+
+Through testing we found there is an optimal number of threads. Each thread that is added increases the performance up untill a point, then it gets worse again. While this depends on the computer, the
+tests we have done on one computer found that 20 threads was optimal, after that the effort in creation and removal of the threads negated the effects of the threads themselves.
+
+Below you can find a number of threads and the seconds that they took:
+
+| Threads | Seconds |
+|---------|:-------:|
+| 1       |  8.02   |
+| 2       |  7.99   |
+| 4       |  8.01   |
+| 5       |  8.24   |
+| 8       |  8.03   |
+| 10      |  8.06   |
+| 20      |  8.25   |
+| 50      |  8.21   |
+| 100     |  8.45   |
+| 150     |  8.47   |
+
+As expected, there is an optmimum amount of threads, the computer preformed the tasks faster until 20 threads, after which it was slower.
+The information is logged with the amount of the threads and the amount it takes.
+
 #### Reading with Streams
 To improve upon the file reading system, streams were used to read the csv file and remove the duplicate data.
 To enable this method an Employees class was created, containing getters and setters and a toString method.
@@ -98,9 +122,50 @@ Completing JUnit testing on the SQL
 
 #### Testing file reader / SQL data transfer / multithreading / functional programming
 
+#### Reading with Streams
+To improve upon the file reading system, streams were used to read the csv file and remove the duplicate data.
+To enable this method an Employees class was created, containing getters and setters and a toString method.
+The stream returned a list of employees and made use of the distinct keyword and a map to split the csv data into
+rows of employees with the duplicate data removed. A separate method was also created to provide a list of duplicate
+data if the user required it.
+
+The stream improved the file reading speed massively. The image below shows the use of StreamsCompareMain class
+to compare the two methods.
+######
+![img_1.png](Images/img_1.png)
+######
+The stream method was over 400 times quicker to read the data, this is largely because the raw data is only looped through
+once, and only uses one other class (Employees) when ran.
+
+Log4j was used to log this comparison to the logfile, below shows the output for this comparison. The logger will also
+warn the user if the try catch block in the Stream method throws an IOException.
+######
+![img_2.png](Images/img_2.png)
+######
+
+
+#### Testing SQL Data send and receive
+Completing JUnit testing on the SQL
+
+#### Project Management: Scrum
+A scrum master was nominated for the project and the week split into 4 sprints. Each sprint fit nicely into the
+4 phase format of the project and so in each sprint meeting the next phase was discussed. Each person
+was assigned a responsibility for the phase and progress discussed in the next sprint.
+In each sprint, meeting minutes were taken by the scrum master and uploaded into the repository. As an example
+phase 1's minutes are shown below.
+######
+![img_3.png](Images/img_3.png)
+######
+A trello board was also created to keep track of each sprint's backlog, to which the minutes were also uploaded.
+The final board is shown below after the project's completion.
+######
+![img_4.png](Images/img_4.png)
+######
 
 #### Logging with Log4j
-To check if everything is working accordingly to the expected results. We can log the actions of the program, throwing possible *warning* and *errors* that the program might not be able to handle.
+To check if everything is working accordingly to the expected results. We can log the actions of the program; throwing possible *warning* and *errors* that the program might not handle properly.
 
-<font color="red">INSERT LOG PICTURE OF THE PROGRAM AFTER RUNNING COMPLETELY</font>
+To reduce the image size, multiple *Database connection created* logs have been removed from it.
+
+![logExample](https://user-images.githubusercontent.com/63067669/153783101-84bbef7c-a87d-439e-95f5-0c84581877b3.png)
 
